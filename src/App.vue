@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">BookStore</router-link> |
+      <router-link to="/about">About</router-link> |
+      <router-link to="/outlet">Outlet</router-link> |
+      <router-link to="/cart">Cart</router-link> 
     </div>
     <router-view/>
   </div>
@@ -15,6 +17,9 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-image: url(./assets/books-background.jpg);
+  background-size: cover;
+  height: 100vw;
 }
 
 #nav {

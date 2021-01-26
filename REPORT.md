@@ -21,7 +21,7 @@ User stories:
 5. As a user I want to see light colors on interface.
 6. As a user I want to see information from product if i click it
 7. As a user I want to see an image of the product before I buy it. 
-8. As a user I want to have different options on the thing that I am buying.
+8. As a user I want to have different options on the book style.
 9. As a user I want to see the price of the product. 
 10. As a user I want to see product description. 
 11. As a user I want to see the product image. 
@@ -32,4 +32,4 @@ Trello:
 https://trello.com/b/mSb6EM91/webbshop-g1
 
 GitHub: 
-https://github.com/Jensen-frontend-fwk19g/G1-webbshop
+https://github.com/Jensen-frontend-fwk19g/G1-Webshop

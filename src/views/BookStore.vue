@@ -1,6 +1,6 @@
 <template>
   <section>
-      <h1>Hej</h1>
+      <h1>This is bookstore</h1>
   </section>
 </template>
 
