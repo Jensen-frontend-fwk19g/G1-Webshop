@@ -1,13 +1,9 @@
 <template>
 <div >
     <h1>Här är alla Böcker</h1>
-    <button @click="fetchBooks"> Click me </button>
-    <div v-for="book in allBooks" :key='book.id' @click="goTo(book.id)" >
+    <div v-for="book in allBooks" :key='book.id' @click="goTo(book.id)" class="books" >
         <h2>{{book.Title}}</h2>
         <h3>{{book.Price}}</h3>
-    </div>
-</div>
-  
 </template>
 
 <script>
@@ -31,11 +27,19 @@ export default {
             this.$router.push(`/BookInfo/${id}`)
             console.log(id)
         }
+    },
+    beforeMount() {
+        this.fetchBooks()
     }
 
 }
 </script>
 
 <style>
+.books {
+    background: white;
+    width: 10em;
+    height: 6em;
+}
 
 </style>
