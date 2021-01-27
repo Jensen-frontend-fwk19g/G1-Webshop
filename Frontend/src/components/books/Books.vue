@@ -43,9 +43,19 @@ export default {
 
 <style>
 .books {
-    background: white;
-    width: 10em;
-    height: 6em;
-}
+    margin: 15px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: white;
+    box-shadow: 0 0 16px gray;
+    float: left;
+    width: 240px;
+  }
+  
+  
+.books img {
+    width: 200px;
+    height: 160px;
+  }
 
 </style>

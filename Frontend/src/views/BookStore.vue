@@ -1,6 +1,5 @@
 <template>
   <section>
-      <h1>This is bookstore</h1>
       <Books @allBooks="allBooks"/>
   </section>
 </template>
