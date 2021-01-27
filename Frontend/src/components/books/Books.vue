@@ -1,13 +1,11 @@
 <template>
-<div >
-    <h1>Här är alla Böcker</h1>
-    <button @click="fetchBooks"> Click me </button>
-    <div v-for="book in allBooks" :key='book.id' >
-        <h2>{{book.Title}}</h2>
-        <h3>{{book.Price}}</h3>
-        <h3>{{book.Description}}</h3>
+<section>
+    <div v-for="book in allBooks" :key='book.id' class="books">
+        <h4>{{book.Title}}</h4>
+        <h5>{{book.Price}}:-</h5>
+        <h6>{{book.Description}}</h6>
     </div>
-</div>
+</section>
   
 </template>
 
@@ -27,11 +25,19 @@ export default {
                 this.allBooks = 'Could not retrive all books, please try again.'
             }
         }
+    },
+    beforeMount() {
+        this.fetchBooks()
     }
 
 }
 </script>
 
 <style>
+.books {
+    background: white;
+    width: 10em;
+    height: 6em;
+}
 
 </style>
