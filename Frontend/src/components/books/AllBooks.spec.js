@@ -1,10 +1,10 @@
 import {shallowMount} from '@vue/test-utils';
 import {enableFetchMocks} from 'jest-fetch-mock';
-import Books from './Books.vue'
+import AllBooks from './AllBooks.vue'
 
 describe('Books.vue', () => {
     it('should display all books when mounted', async () => {
-        const wrapper = shallowMount(Books);
+        const wrapper = shallowMount(AllBooks);
         
         enableFetchMocks()
         const fakeData = {
@@ -23,6 +23,10 @@ describe('Books.vue', () => {
         expect(numberOfCalls).toBe(1);
         expect(actualUrl).toBe(expectedUrl);
     })
+    
+    /*
+    it('Should go to book information when a book is clicked', () => {
 
-    it('Should go to book information when a book is clicked')
+    })
+    */
 })
