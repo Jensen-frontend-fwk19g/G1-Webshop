@@ -1,5 +1,15 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <section>
+      <h1>This is about</h1>
+  </section>
 </template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style>
+
+</style>
