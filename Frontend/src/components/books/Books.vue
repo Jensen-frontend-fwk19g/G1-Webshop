@@ -4,6 +4,9 @@
     <div v-for="book in allBooks" :key='book.id' @click="goTo(book.id)" class="books" >
         <h2>{{book.Title}}</h2>
         <h3>{{book.Price}}</h3>
+        <img :src="book.img" alt="book.Img" />
+    </div>
+</div> 
 </template>
 
 <script>
@@ -28,6 +31,7 @@ export default {
             console.log(id)
         }
     },
+
     beforeMount() {
         this.fetchBooks()
     }
