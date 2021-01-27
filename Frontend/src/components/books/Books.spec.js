@@ -25,4 +25,6 @@ describe('Books.vue', () => {
         expect(numberOfCalls).toBe(1);
         expect(actualUrl).toBe(expectedUrl);
     })
+
+    it('Should go to book information when a book is clicked')
 })

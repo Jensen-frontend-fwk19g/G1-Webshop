@@ -1,5 +1,5 @@
 {
-  "name": "group1-webshop",
+  "name": "g1",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -25,5 +25,9 @@
     "eslint-plugin-vue": "^6.2.2",
     "jest-fetch-mock": "^3.0.3",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "description": "webshop",
+  "main": ".eslintrc.js",
+  "author": "G1",
+  "license": "ISC"
 }
