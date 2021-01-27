@@ -5,7 +5,6 @@ import Books from './Books.vue'
 describe('Books.vue', () => {
     it('should display all books when mounted', async () => {
         const wrapper = shallowMount(Books);
-        const button = wrapper.find('button');
         
         enableFetchMocks()
         const fakeData = {
@@ -15,7 +14,6 @@ describe('Books.vue', () => {
         fetch.mockResponseOnce(JSON.stringify(fakeData));
         const expectedUrl = 'http://localhost:3000/products'
 
-        await button.trigger('click');
         const numberOfCalls = fetch.mock.calls.length;
         const actualUrl = fetch.mock.calls[0][0];
 
