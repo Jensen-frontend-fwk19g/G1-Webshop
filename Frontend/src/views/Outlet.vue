@@ -1,12 +1,20 @@
 <template>
-  <div>
+  <section>
       <h2>This is outlet</h2>
-  </div>
+      <OutletSale v-for="book in allBooks" :key='book.id' :book="book" />
+  </section>
 </template>
 
 <script>
-export default {
+import OutletSale from './../components/outlet/OutletSale'
 
+export default {
+  component: {
+    OutletSale
+  },
+   props: { 
+    allBooks: Array 
+  },
 }
 </script>
 

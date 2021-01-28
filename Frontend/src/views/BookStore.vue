@@ -1,26 +1,20 @@
 <template>
   <section>
-      <AllBooks @allBooks="booksAll" />
-      <Book v-for="book in allBooks" :key='book.id' :allBooks="book"/>
+    <h1>Här är alla Böcker</h1>
+      <AllBooks v-for="book in books" :key='book.id' :book="book" />
   </section>
 </template>
 
 <script>
 import AllBooks from './../components/books/AllBooks'
-import Book from '../components/books/Book' 
 
 export default {
   props: { 
-    allBooks: Array 
+    books: Array
   }, 
   components: {
-    AllBooks, Book
+    AllBooks,
   },
-  methods: {
-    booksAll(books) {
-      this.$emit('allBooks', books)
-    }
-  }
 }
 </script>
 

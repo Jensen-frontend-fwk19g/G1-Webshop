@@ -5,31 +5,43 @@
         <router-link to="/">BookStore</router-link> |
         <router-link to="/about">About</router-link> |
         <router-link to="/outlet">Outlet</router-link> |
-        <router-link to="/cart">Cart</router-link> 
+        <router-link to="/cart">Cart</router-link>
       </div>
     </header>
 
-    <router-view 
-    @allBooks="booksAll" 
-    :AllBooks="AllBooks" 
-    />
-
+    <router-view :books="books" />
   </div>
 </template>
 
 <script>
+import books from '@/assets/products.json'
+
 export default {
-  data:() => ({
-    AllBooks: Array
-  }),
-  methods: {
-    booksAll(books) {
-      this.AllBooks = books
-      console.log(this.AllBooks)
+  computed: {
+    books() {
+      return books.products
     }
   }
-  
-}
+  /*
+  data: () => ({
+    allBooks: Array,
+  }),
+  methods: {
+    async fetchBooks() {
+      try {
+        const response = await fetch("http://localhost:3000/products");
+        const json = await response.json();
+        this.allBooks = json.products;
+      } catch {
+        this.allBooks = "Could not retrive all books, please try again.";
+      }
+    }
+  },
+  created() {
+    this.fetchBooks();
+  }
+  */
+};
 </script>
 
 <style>
@@ -39,14 +51,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-
 }
 header {
-    background-image: url(./assets/books-background.jpg);
-    background-size: cover;
-    height: 25vw;
-    text-align: center;
-    background-position: calc(100% - 1px) calc(50% - 1px); 
+  background-image: url(./assets/books-background.jpg);
+  background-size: cover;
+  height: 25vw;
+  text-align: center;
+  background-position: calc(100% - 1px) calc(50% - 1px);
 }
 
 #nav {
