@@ -8,13 +8,23 @@ describe('AboutText.vue', () => {
         expect(heading1.exists()).toBe(true)
     })
 
-    it('should display 2 paragraphs on mount', () => {
+    it('should display all paragraphs on mount', () => {
         const wrapper = shallowMount(AboutText);
         const paragraphs = wrapper.findAll('p');
 
         const expectedNumber = 3;
         const actualNumber = paragraphs.length
         expect(actualNumber).toBe(expectedNumber)
+    })
+
+    it('should display 1 image on mount', () => {
+        const wrapper = shallowMount(AboutText);
+        const image = wrapper.findAll('img');
+
+        const expectedNumber = 1;
+        const actualNumber = image.length;
+        expect(actualNumber).toBe(expectedNumber);
+
     })
 
 })
