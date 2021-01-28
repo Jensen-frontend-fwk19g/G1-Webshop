@@ -1,6 +1,6 @@
 <template>
   <section>
-      <AllBooks :allBooks="allBooks"/>
+      <Books @allBooks="allBooks"/>
   </section>
 </template>
 
