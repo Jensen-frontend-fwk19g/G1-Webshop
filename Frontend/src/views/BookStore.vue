@@ -1,15 +1,17 @@
 <template>
   <section>
-      <Books @allBooks="allBooks"/>
+      <AllBooks @allBooks="allBooks"/>
   </section>
 </template>
 
 <script>
-import Books from './../components/books/Books'
+import AllBooks from './../components/books/AllBooks'
 export default {
-  props: { allBooks: Array }, 
+  props: { 
+    allBooks: Array 
+  }, 
   components: {
-    Books
+    AllBooks
   },
 }
 </script>

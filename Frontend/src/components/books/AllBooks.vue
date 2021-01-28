@@ -1,12 +1,11 @@
 <template>
-<div >
+<div>
     <h1>Här är alla Böcker</h1>
     <div v-for="book in allBooks" :key='book.id' @click="goTo(book.id)" class="books" >
         <h2>{{book.Title}}</h2>
         <h3>{{book.Price}}</h3>
         <img :src="imgUrl" alt="book.Img" />
         <img src="/assets/lor.jpg" alt="hp">
-        
     </div>
 </div> 
 </template>
@@ -31,10 +30,8 @@ export default {
         },
         goTo(id){
             this.$router.push(`/BookInfo/${id}`)
-            console.log(id)
         }
     },
-
     beforeMount() {
         this.fetchBooks()
     }
@@ -50,7 +47,12 @@ export default {
     box-shadow: 0 0 16px gray;
     float: left;
     width: 240px;
-  }
+}
+
+img {
+    width: 10px;
+    height: 10px;
+}
   
   
 .books img {
