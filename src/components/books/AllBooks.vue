@@ -3,8 +3,9 @@
     <div @click="goTo(book.id)" class="books" >
         <h2>{{book.Title}}</h2>
         <h3>{{book.Price}}</h3>
+        <img :src="book.Img" alt="bild">
+        <img src="../../assets/hp.jpg" alt="hej">
 
-        <img src="/assets/lor.jpg" alt="hp">
     </div>
 </div> 
 </template>
@@ -32,11 +33,6 @@ export default {
     box-shadow: 0 0 16px gray;
     float: left;
     width: 240px;
-}
-
-img {
-    width: 10px;
-    height: 10px;
 }
   
   

@@ -6,7 +6,7 @@
             "Description": "11 year old wizard",
             "Price": 250,
             "Type": "Pocket",
-            "Img": "hp.jpg",
+            "Img": "./assets/hp.jpg",
             "sale": false
         },
         {

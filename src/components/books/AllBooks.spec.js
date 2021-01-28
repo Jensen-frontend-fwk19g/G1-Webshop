@@ -3,6 +3,7 @@ import {shallowMount} from '@vue/test-utils';
 import AllBooks from './AllBooks.vue'
 
 describe('Books.vue', () => {
+    /*
     it('should display all books and a description when mounted', async () => {
         const wrapper = shallowMount(AllBooks);
         const expectedDescrition = 'Here is all the books';
@@ -22,40 +23,20 @@ describe('Books.vue', () => {
         const bookNameExist = wrapper.findAll('h2').exists();
 
         expect(bookNameExist).toBeTruthy();
-    })
-
-    /*
-    it('should send a request to the database when page is loaded', () => {
-        
-        enableFetchMocks();
-        const fakeData = {
-            url: 'https://example'
-        }
-
-        fetch.mockResponse(JSON.stringify(fakeData));
-        const expectedUrl = 'http://localhost:3000/products'
-
-        const numberOfCalls = fetch.mock.calls.length;
-        const actualUrl = fetch.mock.calls[0][0];
-
-        await wrapper.vm.$nextTick();
-        await wrapper.vm.$nextTick();
-
-        expect(numberOfCalls).toBe(1);
-        expect(actualUrl).toBe(expectedUrl);
-    })
-
-    */
-    
-    /*
-    it('Should go to book information when a book is clicked', () => {
-
-    })
+    })  */
     
    it('Should display image of book in the landing page', () => {
-    const wrapper = shallowMount(Books);
+    const wrapper = shallowMount(AllBooks);
     let imgExists =wrapper.find('img');
     expect(imgExists.exists()).toBe(true)
+    }) 
+    
+
+    it('should go to individual book when book is clicked', async () =>  {
+        const wrapper = shallowMount(AllBooks);
+        //let bookFind = wrapper.findAll('div')
+        //await bookFind.trigger('click');
+
+        //expect(bookFind).toBe(true);
     })
-    */
 })
