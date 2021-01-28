@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>boken du valt</h2>
-    <Book v-for="book in AllBooks" :key='book.id' :book="book"/>
+    <Book v-for="book in allBooks" :key='book.id' :allBooks="book"/>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ components: {
     Book
   },
   props: {
-    AllBooks: Array
+    allBooks: Array
   }
 }
 </script>
