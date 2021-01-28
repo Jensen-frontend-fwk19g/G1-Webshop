@@ -1,19 +1,23 @@
 <template>
   <div>
-    <h2>boken du valt</h2>
-    <Book v-for="book in allBooks" :key='book.id' :allBooks="book"/>
+    <h1>Boken du valt</h1>
+      <h2>info om {{ book.Title }}</h2>
+        <h2>{{book.Title}}</h2>
+        <h3>{{book.Price}}</h3>
+        <h3>{{book.Description}}</h3>
   </div>
 </template>
 
 <script>
-import Book from '../components/books/Book' 
 export default {
- components: {
-    Book
-  },
-  props: {
-    allBooks: Array
-  }
+ props: {
+     books: Object
+ },
+ computed: {
+    book(){ 
+        return this.books.filter( b => b.id == this.$route.params.id )[0]
+    }
+ }
 }
 </script>
 
