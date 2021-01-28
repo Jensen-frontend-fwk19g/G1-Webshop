@@ -1,6 +1,6 @@
 <template>
 <div>
-    <h1>Här är alla Böcker</h1>
+    <h1>Here is all the books</h1>
     <div v-for="book in allBooks" :key='book.id' @click="goTo(book.id)" class="books" >
         <h2>{{book.Title}}</h2>
         <h3>{{book.Price}}</h3>
