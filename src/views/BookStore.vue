@@ -1,17 +1,19 @@
 <template>
   <section>
-      <AllBooks @allBooks="allBooks"/>
+    <h1>Här är alla Böcker</h1>
+      <AllBooks v-for="book in books" :key='book.id' :book="book" />
   </section>
 </template>
 
 <script>
 import AllBooks from './../components/books/AllBooks'
+
 export default {
   props: { 
-    allBooks: Array 
+    books: Array
   }, 
   components: {
-    AllBooks
+    AllBooks,
   },
 }
 </script>
