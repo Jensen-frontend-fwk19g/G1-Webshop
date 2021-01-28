@@ -6,7 +6,7 @@
       <aside class="orderCart">
         <img src="./../assets/bag.png" alt="bag" />
         <aside class="cartItems">
-          <p>{{ cartLength }}</p>
+          <p></p>
         </aside>
       </aside>
   </section>
