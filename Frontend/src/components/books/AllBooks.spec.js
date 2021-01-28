@@ -30,5 +30,11 @@ describe('Books.vue', () => {
     it('Should go to book information when a book is clicked', () => {
 
     })
+    
+   it('Should display image of book in the landing page', () => {
+    const wrapper = shallowMount(Books);
+    let imgExists =wrapper.find('img');
+    expect(imgExists.exists()).toBe(true)
+    })
     */
 })
