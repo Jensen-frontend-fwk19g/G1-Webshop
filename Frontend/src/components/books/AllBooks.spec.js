@@ -25,6 +25,15 @@ describe('Books.vue', () => {
         expect(actualUrl).toBe(expectedUrl);
         */
     })
+    it('calls filter when input is changed', () => {
+        const filter= jest.spyOn(AllBooks.methods, 'filter')
+
+        const wrapper = shallowMount(AllBooks);
+        const searchBox = wrapper.find( '#search' );
+        searchBox.setValue('Har');
+        searchBox.trigger('input');
+        expect(filter).toHaveBeenCalled;
+    })
     
     /*
     it('Should go to book information when a book is clicked', () => {
