@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+<<<<<<< HEAD
     <div id="nav">
       <router-link to="/">BookStore</router-link> |
       <router-link to="/about">About</router-link> |
@@ -10,6 +11,38 @@
   </div>
 </template>
 
+=======
+    <header>
+      <div id="nav">
+        <router-link to="/">BookStore</router-link> |
+        <router-link to="/about">About</router-link> |
+        <router-link to="/outlet">Outlet</router-link> |
+        <router-link to="/cart">Cart</router-link> 
+      </div>
+    </header>
+    <router-view 
+    @allBooks="booksAll" 
+    :AllBooks="AllBooks" 
+    />
+  </div>
+</template>
+
+<script>
+export default {
+  data:() => ({
+    AllBooks: Array
+  }),
+  methods: {
+    booksAll(books) {
+      this.AllBooks = books
+      console.log(this.AllBooks)
+    }
+  }
+  
+}
+</script>
+
+>>>>>>> dev
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
