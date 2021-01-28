@@ -8,7 +8,7 @@
 <script>
 import Book from '../components/books/Book' 
 export default {
- components: {
+components: {
     Book
   },
   props: {

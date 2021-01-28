@@ -1,7 +1,8 @@
 <template>
 <div>
     <h1>Här är alla Böcker</h1>
-    <div v-for="book in allBooks" :key='book.id' @click="goTo(book.id)" class="books" >
+    <div v-for="book in allBooks" :key='book.id'  class="books" >
+        <img src="./../../assets/add.png" alt="add" class="add" @click="addToCart(book)" />
         <h2>{{book.Title}}</h2>
         <h3>{{book.Price}}</h3>
         <img :src="imgUrl" alt="book.Img" />
@@ -11,9 +12,12 @@
 </template>
 
 <script>
+
 export default {
+
     data: () => ({
         allBooks: Array,
+        cart: Array
     }),
     methods: {
         async fetchBooks() {
@@ -27,8 +31,29 @@ export default {
                 this.allBooks = 'Could not retrive all books, please try again.'
             }
         },
-        goTo(id){
+        /*goTo(id){
             this.$router.push(`/BookInfo/${id}`);
+        },*/
+        addToCart(book) {
+            console.log(book);
+            this.$emit('addToCart',book)
+            
+            /*let cartItem = this.cart.find(item => item.id == book.id);
+            console.log(cartItem)
+            if (cartItem) {
+                cartItem.quantity++
+            } 
+            else{
+                //else add to cart with quantity 1
+                //product.quantity = 1;
+                this.cart.push({
+                id: book.id,
+                price: book.Price,
+                title: book.Title,
+                quantity: 1
+                });
+                console.log(this.cart)
+            }*/
         }
     },
     beforeMount() {
