@@ -28,6 +28,7 @@ export default {
             }
         },
         goTo(id){
+            console.log(this.allBooks)
             this.$router.push(`/BookInfo/${id}`);
         }
     },

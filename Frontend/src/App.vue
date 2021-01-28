@@ -8,10 +8,12 @@
         <router-link to="/cart">Cart</router-link> 
       </div>
     </header>
+
     <router-view 
     @allBooks="booksAll" 
     :AllBooks="AllBooks" 
     />
+
   </div>
 </template>
 
