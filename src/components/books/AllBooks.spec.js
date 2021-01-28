@@ -27,7 +27,7 @@ describe('Books.vue', () => {
     
    it('Should display image of book in the landing page', () => {
     const wrapper = shallowMount(AllBooks);
-    let imgExists =wrapper.find('img');
+    const imgExists = wrapper.find('img');
     expect(imgExists.exists()).toBe(true)
     }) 
     

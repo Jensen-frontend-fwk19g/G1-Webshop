@@ -1,21 +1,20 @@
 import {shallowMount} from '@vue/test-utils';
-import {enableFetchMocks} from 'jest-fetch-mock';
-import Book from './Book.vue'
+import BookInfo from './BookInfo.vue'
 
-describe('Books.vue', () => {
-    it('should go to individual book when book is clicked', () =>  {
-        const wrapper = shallowMount(Book);
+describe('Book.vue', () => {
+    it('should show "information about" and name of book', () =>  {
+        const wrapper = shallowMount(BookInfo);
+        const information = wrapper.text()
 
-        enableFetchMocks()
-        const fakeData = {
-            url: 'https://example'
-        }
+        expect(information).toMatch(Information)
+    })
+    it('should display the bookcover-image', () => {
+        const wrapper = shallowMount(BookInfo);
+        const image = wrapper.findAll('img');
 
-        fetch.mockResponseOnce(JSON.stringify(fakeData));
-        const expectedUrl = 'http://localhost:3000/products'
+        const expectedImage = 1;
+        const actualImage = image.length;
+        expect(actualImage).toBe(expectedImage);
 
-        await button.trigger('click');
-        const numberOfCalls = fetch.mock.calls.length;
-        const actualUrl = fetch.mock.calls[0][0];
     })
 })

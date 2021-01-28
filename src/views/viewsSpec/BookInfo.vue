@@ -1,10 +1,16 @@
 <template>
   <div>
-    <h1>Boken du valt</h1>
-      <h2>info om {{ book.Title }}</h2>
-        <h2>{{book.Title}}</h2>
-        <h3>{{book.Price}}</h3>
-        <h3>{{book.Description}}</h3>
+    <h1>..Read more about chosen book..</h1>
+     
+      <section>
+        <img src="../../assets/hp.jpg" alt="hi">
+        <article>
+          <h2>{{ book.Title }}</h2>
+          <h2>{{book.Price}} kr</h2>
+          <h3>Description:</h3>
+          <p>{{book.Description}}</p>
+        </article>
+      </section>
   </div>
 </template>
 
@@ -21,6 +27,20 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 10%;
+    }
+    article {
+      margin: 10rem;
+      border: solid 2px #3d2f27;
+      padding: 3rem;
+    }
+    div {
+      color: #3d2f27;
+    }
 
 </style>
