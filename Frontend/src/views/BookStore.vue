@@ -1,25 +1,17 @@
 <template>
   <section>
-      <h1>This is bookstore</h1>
-      <Books @allBooks="allBooks"/>
-      <Cart :cartItem='cart' />
-      <aside class="orderCart">
-        <img src="./../assets/bag.png" alt="bag" />
-        <aside class="cartItems">
-          <p></p>
-        </aside>
-      </aside>
+      <AllBooks @allBooks="allBooks"/>
   </section>
 </template>
 
 <script>
-import Books from './../components/Books'
-import Cart from './Cart'
+import AllBooks from './../components/books/AllBooks'
 export default {
-  props: { allBooks: Array }, 
+  props: { 
+    allBooks: Array 
+  }, 
   components: {
-    Books,
-    Cart
+    AllBooks
   },
 }
 </script>

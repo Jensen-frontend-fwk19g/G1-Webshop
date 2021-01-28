@@ -19,6 +19,7 @@
   color: #2c3e50;
   background-image: url(./assets/books-background.jpg);
   background-size: cover;
+  height: 100vw;
   }
 
 #nav {
