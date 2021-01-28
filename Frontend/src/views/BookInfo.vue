@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>boken du valt</h2>
-    <Book />
+    <Book v-for="book in AllBooks" :key='book.id' :book="book"/>
   </div>
 </template>
 
@@ -10,6 +10,9 @@ import Book from '../components/books/Book'
 export default {
  components: {
     Book
+  },
+  props: {
+    AllBooks: Array
   }
 }
 </script>

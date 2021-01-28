@@ -8,12 +8,24 @@
         <router-link to="/cart">Cart</router-link> 
       </div>
     </header>
-    <router-view/>
+    <router-view 
+    @allBooks="booksAll" 
+    :AllBooks="AllBooks" 
+    />
   </div>
 </template>
 
 <script>
 export default {
+  data:() => ({
+    AllBooks: Array
+  }),
+  methods: {
+    booksAll(books) {
+      this.AllBooks = books
+      console.log(this.AllBooks)
+    }
+  }
   
 }
 </script>
