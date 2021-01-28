@@ -1,3 +1,4 @@
+/*
 import {shallowMount} from '@vue/test-utils';
 import OutletSale from './OutletSale.vue';
 
@@ -6,3 +7,4 @@ describe('OutletSale.vue', () => {
         const wrapper = shallowMount(OutletSale);
     })
 })
+*/
