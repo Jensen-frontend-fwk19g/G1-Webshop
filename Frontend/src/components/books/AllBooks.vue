@@ -22,14 +22,13 @@ export default {
                 const json = await response.json();
                 this.allBooks = json.products;
                 this.$emit('allBooks', this.allBooks)
-                
             }
             catch {
                 this.allBooks = 'Could not retrive all books, please try again.'
             }
         },
         goTo(id){
-            this.$router.push(`/BookInfo/${id}`)
+            this.$router.push(`/BookInfo/${id}`);
         }
     },
     beforeMount() {
@@ -38,7 +37,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .books {
     margin: 15px;
     padding: 1rem;

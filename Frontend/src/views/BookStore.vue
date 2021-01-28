@@ -1,6 +1,6 @@
 <template>
   <section>
-      <AllBooks @allBooks="allBooks"/>
+      <AllBooks @allBooks="booksAll"/>
   </section>
 </template>
 
@@ -13,6 +13,11 @@ export default {
   components: {
     AllBooks
   },
+  methods: {
+    booksAll(books) {
+      this.$emit('allBooks', books)
+    }
+  }
 }
 </script>
 
