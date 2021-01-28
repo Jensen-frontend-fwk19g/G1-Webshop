@@ -4,6 +4,11 @@
     <div v-for="book in allBooks" :key='book.id' @click="goTo(book.id)" class="books" >
         <h2>{{book.Title}}</h2>
         <h3>{{book.Price}}</h3>
+        <img :src="imgUrl" alt="book.Img" />
+        <img src="/assets/lor.jpg" alt="hp">
+        
+    </div>
+</div> 
 </template>
 
 <script>
@@ -18,6 +23,7 @@ export default {
                 const json = await response.json();
                 this.allBooks = json.products;
                 this.$emit('allBooks', this.allBooks)
+                
             }
             catch {
                 this.allBooks = 'Could not retrive all books, please try again.'
@@ -28,18 +34,28 @@ export default {
             console.log(id)
         }
     },
+
     beforeMount() {
         this.fetchBooks()
     }
-
 }
 </script>
 
 <style>
 .books {
-    background: white;
-    width: 10em;
-    height: 6em;
-}
+    margin: 15px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: white;
+    box-shadow: 0 0 16px gray;
+    float: left;
+    width: 240px;
+  }
+  
+  
+.books img {
+    width: 200px;
+    height: 160px;
+  }
 
 </style>

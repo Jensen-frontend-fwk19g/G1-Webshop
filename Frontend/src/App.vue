@@ -1,11 +1,13 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">BookStore</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/outlet">Outlet</router-link> |
-      <router-link to="/cart">Cart</router-link> 
-    </div>
+    <header>
+      <div id="nav">
+        <router-link to="/">BookStore</router-link> |
+        <router-link to="/about">About</router-link> |
+        <router-link to="/outlet">Outlet</router-link> |
+        <router-link to="/cart">Cart</router-link> 
+      </div>
+    </header>
     <router-view/>
   </div>
 </template>
@@ -23,9 +25,14 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-image: url(./assets/books-background.jpg);
-  background-size: cover;
-  height: 100vw;
+
+}
+header {
+    background-image: url(./assets/books-background.jpg);
+    background-size: cover;
+    height: 25vw;
+    text-align: center;
+    background-position: calc(100% - 1px) calc(50% - 1px); 
 }
 
 #nav {
