@@ -6,7 +6,11 @@
             "Description": "11 year old wizard Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque architecto fuga qui quod sit rerum quisquam illum, iure accusantium expedita. Ducimus nobis voluptatem delectus distinctio facere? Quam, vero dignissimos",
             "Price": 250,
             "Type": "Pocket",
+<<<<<<< HEAD
+            "Img": "http://localhost:8080/src/assets/hungergames.jpg",
+=======
             "Img": "./assets/hp.jpg",
+>>>>>>> 3bba5b602211c6aaaa63112e7b55000971d6d25c
             "sale": false
         },
         {

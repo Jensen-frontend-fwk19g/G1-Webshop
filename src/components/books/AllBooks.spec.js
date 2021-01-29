@@ -1,23 +1,15 @@
-import {shallowMount} from '@vue/test-utils';
-//import {enableFetchMocks} from 'jest-fetch-mock';
+import { shallowMount } from '@vue/test-utils';
 import AllBooks from './AllBooks.vue'
 
 describe('Books.vue', () => {
     /*
     it('should display all books and a description when mounted', async () => {
         const wrapper = shallowMount(AllBooks);
-        const expectedDescrition = 'Here is all the books';
-
-        const bookExist = wrapper.findAll('.books').exists();
-        const descriptionExist = wrapper.find('h1').exists();
-        const actualDescription = wrapper.find('h1').text();
-
-        expect(bookExist).toBeTruthy();
-        expect(descriptionExist).toBeTruthy();
-        expect(actualDescription).toBe(expectedDescrition);
+        const allBooksExists = wrapper.findAll('div').exists();
+        expect(allBooksExists).toBeTruthy();
     })
 
-    
+    /*
     it('should display name on all books when mounted', () => {
         const wrapper = shallowMount(AllBooks);        
         const bookNameExist = wrapper.findAll('h2').exists();
