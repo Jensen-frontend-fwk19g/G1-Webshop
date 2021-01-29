@@ -1,10 +1,11 @@
-import {shallowMount} from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import AllBooks from './AllBooks.vue'
 
-describe('Books.vue', () => {
-    it('should display all books and a description when mounted', async () => {
+describe('AllBooks.vue', () => {
+    it('should display all books when mounted', () => {
         const wrapper = shallowMount(AllBooks);
-        
+        const allBooksExists = wrapper.findAll('div').exists();
+        expect(allBooksExists).toBeTruthy();
     })
 
     /*

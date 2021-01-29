@@ -1,12 +1,9 @@
 <template>
-<div>
     <div @click="goTo(book.id)" class="books" >
         <h2>{{book.Title}}</h2>
         <h3>{{book.Price}}</h3>
-
-        <img src="/assets/lor.jpg" alt="hp">
+        <img :src="book.Img" alt="hp">
     </div>
-</div> 
 </template>
 
 <script>
@@ -16,7 +13,6 @@ export default {
     },
     methods: {
         goTo(id){
-            console.log(this.book)
             this.$router.push(`/BookInfo/${id}`)
         }
     },

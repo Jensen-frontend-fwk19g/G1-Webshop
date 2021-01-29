@@ -1,19 +1,19 @@
 <template>
   <section>
-      <h2>This is outlet</h2>
-      <OutletSale v-for="book in allBooks" :key='book.id' :book="book" />
+    <h1>Här är Outlet</h1>
+      <Outlet v-for="book in books" :key='book.id' :book="book" v-show="book.sale === true"/>
   </section>
 </template>
 
 <script>
-import OutletSale from './../components/outlet/OutletSale'
+import Outlet from './../components/outlet/OutletSale'
 
 export default {
-  component: {
-    OutletSale
-  },
-   props: { 
-    allBooks: Array 
+  props: { 
+    books: Array
+  }, 
+  components: {
+    Outlet
   },
 }
 </script>
