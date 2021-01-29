@@ -1,18 +1,23 @@
 <template>
   <div>
     <h2>This is your basket</h2>
-    <CartItem v-for="book in cart" :key='book.id' :book="book" />
+    <section class="cartItems" v-for="(book, index) in cart" :key="index" :book="book" >
+      <div class="items">
+        <p>{{ book.id }}</p>
+        <p class="bookTitle">{{ book.Title }}</p>
+        <p class="bookPrice">{{ book.Price }}</p>
+        <p class="bookType">{{ book.Type }}</p>
+        <button @click="removeItem(book)" :id="book.id" class="dltBtn">X</button>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-import CartItem from '../components/cartpage/CartItem'
+
 export default {
   props: {
     cartItems: Array
-  },
-  components: {
-    CartItem
   },
   data() {
     return {
@@ -37,10 +42,24 @@ export default {
           }
       ]
     }
+  },
+  methods: {
+    removeItem(item){
+      let index= this.cart.indexOf(item);
+      this.cart.splice(index, 1);
+    }
   }
 }
 </script>
 
-<style>
-
+<style scoped>
+.items {
+    margin: 15px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: white;
+    box-shadow: 0 0 16px gray;
+    float: left;
+    width: 240px;
+}
 </style>
