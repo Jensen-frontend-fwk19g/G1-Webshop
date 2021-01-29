@@ -14,14 +14,21 @@ describe('BookInfo.vue', () => {
         const expected = 'Harry Potter'
         expect(information).toMatch(expected);
     })
-/*
+
     it('should display the bookcover-image', () => {
-        const wrapper = shallowMount(BookInfo);
-        const image = wrapper.findAll('img');
-
-        const expectedImage = 1;
+        const wrapper = shallowMount(BookInfo, {
+            propsData: {
+                book: {
+                    "Img": "/img/hp.9eeae1bc.jpg",
+                }
+            }
+        });
+        /*const image = wrapper.find('img');
+        const expectedImage = "1";
         const actualImage = image.length;
-        expect(actualImage).toBe(expectedImage);
+        expect(expectedImage).toBe(actualImage); */
+        const imgExists = wrapper.find('img');
+        expect(imgExists.exists()).toBe(true)
 
-    }) */
+    }) 
 })

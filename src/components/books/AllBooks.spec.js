@@ -56,7 +56,7 @@ describe('Books.vue', () => {
       })
 
     
-   it('Should display image of book in the landing page', () => {
+   it('Should display image of each book in the landing page', () => {
     const wrapper = shallowMount(AllBooks, {
     propsData: {
         book: {
