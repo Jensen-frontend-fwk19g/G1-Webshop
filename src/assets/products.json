@@ -3,16 +3,20 @@
         {
             "id": 1,
             "Title": "Harry Potter",
-            "Description": "11 year old wizard",
+            "Description": "11 year old wizard Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque architecto fuga qui quod sit rerum quisquam illum, iure accusantium expedita. Ducimus nobis voluptatem delectus distinctio facere? Quam, vero dignissimos",
             "Price": 250,
             "Type": "Pocket",
+<<<<<<< HEAD
             "Img": "http://localhost:8080/src/assets/hungergames.jpg",
+=======
+            "Img": "./assets/hp.jpg",
+>>>>>>> 3bba5b602211c6aaaa63112e7b55000971d6d25c
             "sale": false
         },
         {
             "id": 2,
             "Title": "Harry Potter",
-            "Description": "11 year old wizard",
+            "Description": "11 year old wizard Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque architecto fuga qui quod sit rerum quisquam illum, iure accusantium expedita. Ducimus nobis voluptatem delectus distinctio facere? Quam, vero dignissimos",
             "Price": 250,
             "Type": "E-book",
             "Img": "hp.jpg",
@@ -21,7 +25,7 @@
         {
             "id": 3,
             "Title": "Harry Potter",
-            "Description": "11 year old wizard",
+            "Description": "11 year old wizard Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque architecto fuga qui quod sit rerum quisquam illum, iure accusantium expedita. Ducimus nobis voluptatem delectus distinctio facere? Quam, vero dignissimos",
             "Price": 250,
             "Type": "Hard cover",
             "Img": "hp.jpg",
@@ -30,7 +34,7 @@
         {
             "id": 4,
             "Title": "Lord of the Rings",
-            "Description": "Story of a fellowship who going to destroy the ring in the mountain of fire.",
+            "Description": "Story of a fellowship who going to destroy the ring in the mountain of fire. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque architecto fuga qui quod sit rerum quisquam illum, iure accusantium expedita. Ducimus nobis voluptatem delectus distinctio facere? Quam, vero dignissimos",
             "Price": 350,
             "Type": "Pocket",
             "Img": "lor.jpg",
@@ -39,7 +43,7 @@
         {
             "id": 5,
             "Title": "Lord of the Rings",
-            "Description": "Story of a fellowship who going to destroy the ring in the mountain of fire.",
+            "Description": "Story of a fellowship who going to destroy the ring in the mountain of fire. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque architecto fuga qui quod sit rerum quisquam illum, iure accusantium expedita. Ducimus nobis voluptatem delectus distinctio facere? Quam, vero dignissimos",
             "Price": 350,
             "Type": "E-book",
             "Img": "lor.jpg",
@@ -57,7 +61,7 @@
         {
             "id": 7,
             "Title": "Gone with the Wind",
-            "Description": "A romance story during the American civil war",
+            "Description": "A romance story during the American civil war Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque architecto fuga qui quod sit rerum quisquam illum, iure accusantium expedita. Ducimus nobis voluptatem delectus distinctio facere? Quam, vero dignissimos",
             "Price": 400,
             "Type": "Pocket",
             "Img": "Gone_With_The_Wind.jpg",
@@ -66,7 +70,7 @@
         {
             "id": 8,
             "Title": "Gone with the Wind",
-            "Description": "A romance story during the American civil war",
+            "Description": "A romance story during the American civil war Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque architecto fuga qui quod sit rerum quisquam illum, iure accusantium expedita. Ducimus nobis voluptatem delectus distinctio facere? Quam, vero dignissimos",
             "Price": 400,
             "Type": "E-book",
             "Img": "Gone_With_The_Wind.jpg",
@@ -75,7 +79,7 @@
         {
             "id": 9,
             "Title": "Gone with the Wind",
-            "Description": "A romance story during the American civil war",
+            "Description": "A romance story during the American civil war Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque architecto fuga qui quod sit rerum quisquam illum, iure accusantium expedita. Ducimus nobis voluptatem delectus distinctio facere? Quam, vero dignissimos",
             "Price": 400,
             "Type": "Hard cover",
             "Img": "Gone_With_The_Wind.jpg",
@@ -84,7 +88,7 @@
         {
             "id": 10,
             "Title": "Doctor Sleep",
-            "Description": "The story about the grown up boy from the earlier book the Shining.",
+            "Description": "The story about the grown up boy from the earlier book the Shining. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque architecto fuga qui quod sit rerum quisquam illum, iure accusantium expedita. Ducimus nobis voluptatem delectus distinctio facere? Quam, vero dignissimos",
             "Price": 200,
             "Type": "Pocket",
             "Img": "drsleep.jpg",
@@ -93,7 +97,7 @@
         {
             "id": 11,
             "Title": "Doctor Sleep",
-            "Description": "The story about the grown up boy from the earlier book the Shining.",
+            "Description": "The story about the grown up boy from the earlier book the Shining. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque architecto fuga qui quod sit rerum quisquam illum, iure accusantium expedita. Ducimus nobis voluptatem delectus distinctio facere? Quam, vero dignissimos",
             "Price": 200,
             "Type": "E-book",
             "Img": "drsleep.jpg",
@@ -102,7 +106,7 @@
         {
             "id": 12,
             "Title": "Doctor Sleep",
-            "Description": "The story about the grown up boy from the earlier book the Shining.",
+            "Description": "The story about the grown up boy from the earlier book the Shining. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque architecto fuga qui quod sit rerum quisquam illum, iure accusantium expedita. Ducimus nobis voluptatem delectus distinctio facere? Quam, vero dignissimos",
             "Price": 200,
             "Type": "Hard cover",
             "Img": "drsleep.jpg",
@@ -111,7 +115,7 @@
         {
             "id": 13,
             "Title": "The Hunger Games",
-            "Description": "Kids who are fighting to the death in a game",
+            "Description": "Kids who are fighting to the death in a game Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque architecto fuga qui quod sit rerum quisquam illum, iure accusantium expedita. Ducimus nobis voluptatem delectus distinctio facere? Quam, vero dignissimos",
             "Price": 500,
             "Type": "Pocket",
             "Img": "hungergames.jpg",
@@ -120,7 +124,7 @@
         {
             "id": 14,
             "Title": "The Hunger Games",
-            "Description": "Kids who are fighting to the death in a game",
+            "Description": "Kids who are fighting to the death in a game Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque architecto fuga qui quod sit rerum quisquam illum, iure accusantium expedita. Ducimus nobis voluptatem delectus distinctio facere? Quam, vero dignissimos",
             "Price": 500,
             "Type": "E-book",
             "Img": "hungergames.jpg",
@@ -129,7 +133,7 @@
         {
             "id": 15,
             "Title": "The Hunger Games",
-            "Description": "Kids who are fighting to the death in a game",
+            "Description": "Kids who are fighting to the death in a game Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque architecto fuga qui quod sit rerum quisquam illum, iure accusantium expedita. Ducimus nobis voluptatem delectus distinctio facere? Quam, vero dignissimos",
             "Price": 500,
             "Type": "Hard cover",
             "Img": "hungergames.jpg",
@@ -138,7 +142,7 @@
         {
             "id": 16,
             "Title": "Wuthering height",
-            "Description": "An orphan kid who is living with Earnshaws",
+            "Description": "An orphan kid who is living with Earnshaws Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque architecto fuga qui quod sit rerum quisquam illum, iure accusantium expedita. Ducimus nobis voluptatem delectus distinctio facere? Quam, vero dignissimos",
             "Price": 300,
             "Type": "Pocket",
             "Img": "wh.jpg",
@@ -147,7 +151,7 @@
         {
             "id": 17,
             "Title": "Wuthering height",
-            "Description": "An orphan kid who is living with Earnshaws",
+            "Description": "An orphan kid who is living with Earnshaws Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque architecto fuga qui quod sit rerum quisquam illum, iure accusantium expedita. Ducimus nobis voluptatem delectus distinctio facere? Quam, vero dignissimos",
             "Price": 300,
             "Type": "E-book",
             "Img": "wh.jpg",
@@ -156,7 +160,7 @@
         {
             "id": 18,
             "Title": "Wuthering height",
-            "Description": "An orphan kid who is living with Earnshaws",
+            "Description": "An orphan kid who is living with Earnshaws Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, itaque architecto fuga qui quod sit rerum quisquam illum, iure accusantium expedita. Ducimus nobis voluptatem delectus distinctio facere? Quam, vero dignissimos",
             "Price": 300,
             "Type": "Hard cover",
             "Img": "wh.jpg",
