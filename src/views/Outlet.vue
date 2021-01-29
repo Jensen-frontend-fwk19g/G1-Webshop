@@ -15,9 +15,12 @@ export default {
   components: {
     Outlet
   },
+  component: {
+    OutletSale,
+  }
+  
 }
 </script>
 
 <style>
-
 </style>

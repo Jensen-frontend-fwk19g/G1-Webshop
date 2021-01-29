@@ -1,9 +1,20 @@
 <template>
+<<<<<<< HEAD
+  <div>
+    <h2>Här är rea</h2>
+    <h2>{{ book.Title }}</h2>
+    <h3>{{ book.Price }}</h3>
+    <h3>{{ book.Description }}</h3>
+    
+        <h2>See anything</h2>
+
+=======
   <div class="books">
     <h2>{{book.Title}}</h2>
     <h3>{{book.Price}}</h3>
 
     <img src="/assets/lor.jpg" alt="hp">
+>>>>>>> d8ba3778ced7ff80beda523e1ed3c7df240f6439
   </div>
 </template>
 
