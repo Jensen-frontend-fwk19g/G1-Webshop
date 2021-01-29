@@ -4,6 +4,9 @@
     <h2>{{ book.Title }}</h2>
     <h3>{{ book.Price }}</h3>
     <h3>{{ book.Description }}</h3>
+    
+        <h2>See anything</h2>
+
   </div>
 </template>
 
