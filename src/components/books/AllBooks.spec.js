@@ -27,7 +27,7 @@ describe('Books.vue', () => {
             }
         });
         const bookNameExist = wrapper.findAll('h2').exists();
-        
+
         const expectedTitle = 'Harry Potter';
         const actualTitle = wrapper.find('h2').text();
 
