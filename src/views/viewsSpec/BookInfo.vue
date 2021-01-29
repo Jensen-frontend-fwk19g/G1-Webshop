@@ -23,7 +23,7 @@ export default {
     book(){ 
         return this.books.filter( b => b.id == this.$route.params.id )[0]
     }
- }
+ } 
 }
 </script>
 

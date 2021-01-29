@@ -1,7 +1,7 @@
 import {shallowMount} from '@vue/test-utils';
 import BookInfo from './BookInfo.vue'
 
-describe('Book.vue', () => {
+describe('BookInfo.vue', () => {
     it('should show "information about" and name of book', () =>  {
         const wrapper = shallowMount(BookInfo);
         const information = wrapper.text()
