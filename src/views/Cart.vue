@@ -1,20 +1,18 @@
 <template>
   <div>
-      <h2>This is your cart</h2>
-      <h4>in your cart</h4>
-      <CartItem v-for="(book,index) in cart" :key="index" :book="book" />
+      <h2>Your basket</h2>
+      <CartItem v-for="book in cart" :key="book.id" :cart="cart" />
   </div>
 </template>
 
 <script>
-import CartItem from '@/components/CartItem.vue'
+import CartItem from './../components/cartpage/CartItem';
 export default {
-  name: 'Cart',
+  props: {
+    cart: Array
+  },
   components: {
     CartItem
-  },
-  props: {
-    cartItem: Array
   }
 }
 </script>

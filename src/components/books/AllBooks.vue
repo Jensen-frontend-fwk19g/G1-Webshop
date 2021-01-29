@@ -1,25 +1,39 @@
 <template>
-<div>
-    <div @click="goTo(book.id)" class="books" >
-        <h2>{{book.Title}}</h2>
-        <h3>{{book.Price}}</h3>
+    <div>
+        <div  class="books" >
+            <h2 @click="goTo(book.id)">{{book.Title}}</h2>
+            <h3>{{book.Price}}</h3>
+            
 
-        <img src="/assets/lor.jpg" alt="hp">
-    </div>
-</div> 
+            <img src="/assets/lor.jpg" alt="hp">
+            <button @click="addToCart(book.id)" class="add">add to cart</button>
+        </div>
+    
+    </div> 
 </template>
 
 <script>
+
+
 export default {
     props: {
-        book: Object
+        book: Object,
     },
     methods: {
         goTo(id){
             console.log(this.book)
             this.$router.push(`/BookInfo/${id}`)
+        },
+        addToCart(book) {
+            console.log('hi')
+            this.$emit('addToCart',book)
         }
     },
+    created() {
+        fetch('../../assets/products.json')
+        .then(response => response.json())
+        .then(json => (this.data = json))
+    }
 }
 </script>
 

@@ -9,12 +9,12 @@
 import OutletSale from './../components/outlet/OutletSale'
 
 export default {
-  component: {
-    OutletSale
-  },
-   props: { 
-    allBooks: Array 
-  },
+    component: {
+      OutletSale
+    },
+    props: { 
+      allBooks: Array 
+    },
 }
 </script>
 

@@ -17,6 +17,11 @@
 import books from '@/assets/products.json'
 
 export default {
+  data() {
+    return {
+      cart: []
+    }
+  },
   computed: {
     books() {
       return books.products
