@@ -163,5 +163,24 @@
             "sale": false
         }
     ],
-    "cart": []
+    "cart": [
+        {
+            "id": 9,
+            "Title": "Gone with the Wind",
+            "Price": 400,
+            "Type": "Hard cover"
+        },
+        {
+            "id": 1,
+            "Title": "Harry Potter",
+            "Price": 250,
+            "Type": "Pocket"
+        },
+        {
+            "id": 6,
+            "Title": "Lord of the Rings",
+            "Price": 350,
+            "Type": "Hard cover"
+        }
+    ]
 }
