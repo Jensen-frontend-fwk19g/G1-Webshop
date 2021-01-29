@@ -1,13 +1,12 @@
 <template>
-<div>
-    <div @click="goTo(book.id)" class="books" >
-        <h2>{{book.Title}}</h2>
-        <h3>{{book.Price}}</h3>
-        <img :src="book.Img" alt="bild">
-        <img src="../../assets/hp.jpg" alt="hej">
-
+    <div class="books" >
+        <div @click="goTo(book.id)">
+            <h2 >{{book.Title}}</h2>
+            <h3>{{book.Price}}</h3>
+            <img :src="book.Img" alt="bild">
+            <img src="../../assets/hp.jpg" alt="hej">
+        </div>
     </div>
-</div> 
 </template>
 
 <script>
