@@ -1,35 +1,22 @@
 <template>
-    <div>
-        <div  class="books" >
-            <h2 @click="goTo(book.id)">{{book.Title}}</h2>
-            <h3>{{book.Price}}</h3>
-            
-
-            <img src="/assets/lor.jpg" alt="hp">
-            <button @click="addToCart(book.id)" class="add">add to cart</button>
-        </div>
-    
-    </div> 
+    <div @click="goTo(book.id)" class="books" >
+        <h2>{{book.Title}}</h2>
+        <h3>{{book.Price}}</h3>
+        <img :src="book.Img" alt="bild">
+        <img src="../../assets/hp.jpg" alt="hej">
+    </div>
 </template>
 
 <script>
-
-
 export default {
     props: {
-        book: Object,
+        book: Object
     },
     methods: {
         goTo(id){
-            console.log(this.book)
             this.$router.push(`/BookInfo/${id}`)
-        },
-        addToCart(book) {
-            console.log('hi')
-            let cartItem = fetch('../../assets/products.json')
-            /*this.$emit('addToCart',book)''*/
-            this.cartItem.push(book)        }
-    }
+        }
+    },
 }
 </script>
 
@@ -37,16 +24,11 @@ export default {
 .books {
     margin: 15px;
     padding: 1rem;
-    border: 1px solid #ccc;
-    background-color: white;
-    box-shadow: 0 0 16px gray;
+    border: 1px solid rgba(15, 15, 15, 0.329);
+    background-color: #c9c9c750;
+    box-shadow: 0 0 7px rgba(43, 41, 41, 0.623);
     float: left;
     width: 240px;
-}
-
-img {
-    width: 10px;
-    height: 10px;
 }
   
   

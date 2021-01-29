@@ -9,14 +9,6 @@
 import Outlet from './../components/outlet/OutletSale'
 
 export default {
-<<<<<<< HEAD
-    component: {
-      OutletSale
-    },
-    props: { 
-      allBooks: Array 
-    },
-=======
   props: { 
     books: Array
   }, 
@@ -27,7 +19,6 @@ export default {
     OutletSale,
   }
   
->>>>>>> dev
 }
 </script>
 
