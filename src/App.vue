@@ -55,7 +55,7 @@ export default {
 header {
   background-image: url(./assets/books-background.jpg);
   background-size: cover;
-  height: 25vw;
+  height: 28vw;
   text-align: center;
   background-position: calc(100% - 1px) calc(50% - 1px);
 }
@@ -67,9 +67,10 @@ header {
 #nav a {
   font-weight: bold;
   color: #2c3e50;
+  text-decoration: none;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #85756d;
 }
 </style>

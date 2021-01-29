@@ -3,8 +3,9 @@
     <div @click="goTo(book.id)" class="books" >
         <h2>{{book.Title}}</h2>
         <h3>{{book.Price}}</h3>
+        <img :src="book.Img" alt="bild">
+        <img src="../../assets/hp.jpg" alt="hej">
 
-        <img src="/assets/lor.jpg" alt="hp">
     </div>
 </div> 
 </template>
@@ -27,16 +28,11 @@ export default {
 .books {
     margin: 15px;
     padding: 1rem;
-    border: 1px solid #ccc;
-    background-color: white;
-    box-shadow: 0 0 16px gray;
+    border: 1px solid rgba(15, 15, 15, 0.329);
+    background-color: #c9c9c750;
+    box-shadow: 0 0 7px rgba(43, 41, 41, 0.623);
     float: left;
     width: 240px;
-}
-
-img {
-    width: 10px;
-    height: 10px;
 }
   
   

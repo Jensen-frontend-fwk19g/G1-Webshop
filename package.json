@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
+    "test:unit": "vue-cli-service test:unit --watch",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -29,5 +29,16 @@
   "description": "webshop",
   "main": ".eslintrc.js",
   "author": "G1",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jensen-frontend-fwk19g/G1-Webshop.git"
+  },
+  "keywords": [
+    "git"
+  ],
+  "bugs": {
+    "url": "https://github.com/Jensen-frontend-fwk19g/G1-Webshop/issues"
+  },
+  "homepage": "https://github.com/Jensen-frontend-fwk19g/G1-Webshop#readme"
 }
