@@ -13,14 +13,8 @@ export default {
     books: Array
   }, 
   components: {
-<<<<<<< HEAD
-    Outlet
-  }
-  
-=======
     OutletSale
   }  
->>>>>>> dev
 }
 </script>
 
