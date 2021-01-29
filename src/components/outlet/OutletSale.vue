@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div>
     <h2>Här är rea</h2>
     <h2>{{ book.Title }}</h2>
@@ -7,16 +8,44 @@
     
         <h2>See anything</h2>
 
+=======
+  <div class="books">
+    <h2>{{book.Title}}</h2>
+    <h3>{{book.Price}}</h3>
+
+    <img src="/assets/lor.jpg" alt="hp">
+>>>>>>> d8ba3778ced7ff80beda523e1ed3c7df240f6439
   </div>
 </template>
 
 <script>
 export default {
+  name: 'OutletSale',
   props: {
     book: Object
   },
 };
 </script>
 
-<style>
+<style scoped>
+.books {
+    margin: 15px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: white;
+    box-shadow: 0 0 16px gray;
+    float: left;
+    width: 240px;
+}
+
+img {
+    width: 10px;
+    height: 10px;
+}
+  
+  
+.books img {
+    width: 200px;
+    height: 160px;
+  }
 </style>
