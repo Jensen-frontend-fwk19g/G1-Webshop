@@ -22,25 +22,6 @@ export default {
       return books.products
     }
   }
-  /*
-  data: () => ({
-    allBooks: Array,
-  }),
-  methods: {
-    async fetchBooks() {
-      try {
-        const response = await fetch("http://localhost:3000/products");
-        const json = await response.json();
-        this.allBooks = json.products;
-      } catch {
-        this.allBooks = "Could not retrive all books, please try again.";
-      }
-    }
-  },
-  created() {
-    this.fetchBooks();
-  }
-  */
 };
 </script>
 
