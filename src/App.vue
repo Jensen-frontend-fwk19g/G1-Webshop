@@ -10,7 +10,7 @@
     </header>
 
     <router-view :books="books" />
-    <router-view :books="outletBooks" />
+
   </div>
 </template>
 
