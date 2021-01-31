@@ -10,7 +10,6 @@
     </header>
 
     <router-view :books="books" />
-    <router-view :books="outletBooks" />
   </div>
 </template>
 
@@ -22,9 +21,6 @@ export default {
   computed: {
     books() {
       return books.products
-    },
-    outletBooks () {
-      return books.outlet
     }
 
   }
