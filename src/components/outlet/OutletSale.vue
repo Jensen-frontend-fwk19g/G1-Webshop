@@ -3,7 +3,9 @@
     <h2>{{book.Title}}</h2>
     <h3>{{book.Price}}</h3>
     <img :src="'/img/'+book.Img" alt="bild">  
-  </div>
+  </div>  
+
+
 </template>
 
 <script>
