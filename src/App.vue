@@ -15,8 +15,6 @@
 
 <script>
 import books from '@/assets/products.json'
-
-
 export default {
   computed: {
     books() {
