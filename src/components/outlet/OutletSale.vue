@@ -1,10 +1,11 @@
 <template>
-  <div class="books">
+  <div class="books">  
     <h2>{{book.Title}}</h2>
     <h3>{{book.Price}}</h3>
+    <img :src="'/img/'+book.Img" alt="bild">  
+  </div>  
 
-    <img src="/assets/lor.jpg" alt="hp">
-  </div>
+
 </template>
 
 <script>
@@ -12,7 +13,7 @@ export default {
   name: 'OutletSale',
   props: {
     book: Object
-  },
+  }
 };
 </script>
 
@@ -26,7 +27,6 @@ export default {
     float: left;
     width: 240px;
 }
-
 img {
     width: 10px;
     height: 10px;
