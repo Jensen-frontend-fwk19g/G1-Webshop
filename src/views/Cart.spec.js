@@ -103,4 +103,11 @@ describe('Cart.vue', () => {
         expect(actual).toBe('');
 
     })
+
+    it('should have the total price.', () => {
+        const wrapper   = shallowMount(Cart);
+        const actual    = wrapper.find('.totalPrice').exists();
+        expect(actual).toBe(true);
+    });
+
 })
