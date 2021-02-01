@@ -105,9 +105,34 @@ describe('Cart.vue', () => {
     })
 
     it('should have the total price.', () => {
-        const wrapper   = shallowMount(Cart);
-        const actual    = wrapper.find('.totalPrice').exists();
+        const wrapper = shallowMount(Cart);
+        const actual = wrapper.find('.totalPrice').exists();
         expect(actual).toBe(true);
     });
+
+    it('should display total price 0 when no book added to basket', () => {
+    
+        const expectedcartLength = 0
+        const expected = 0
+
+        const wrapper = shallowMount(Cart)
+        wrapper.setData({ cart: [], totalCost : 0 })
+
+        const actualcartLength = wrapper.vm.cart.length
+        const actual = wrapper.vm.totalPrice
+
+        expect(actualcartLength).toBe(expectedcartLength)
+        expect(actual).toBe(expected)
+    })
+    
+    it('correct total sum when we have books in basket', () => {
+
+        const wrapper = shallowMount(Cart)
+        const expected = "1300"
+
+        const actual = wrapper.find(".totalPrice").text()
+
+        expect(actual).toContain(expected);
+	})
 
 })
