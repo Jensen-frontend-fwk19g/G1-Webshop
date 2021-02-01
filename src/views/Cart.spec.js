@@ -28,16 +28,22 @@ describe('Cart.vue', () => {
 
     it('every item should have the delete button', () => {
         const wrapper = shallowMount(Cart);
-        /******
-         * const wrapper = shallowMount(Cart, { propsData: {book: { id: 1}}}); 
-         */
+        /**
+         * { propsData: {book: { id: 1}}}*/
+
         const actual = wrapper.find('.dltBtn');
         expect(actual).toBeTruthy();
     });
 
     it('it should display a book´s title', () => {
 
-        const wrapper = shallowMount(Cart)
+        const wrapper = shallowMount(Cart, {
+            propsData: {
+                book: {
+                    Title: "Gone with the Wind"
+                }
+            }
+        })
         const expected = "Gone with the Wind";
 
         const actual = wrapper.find('.bookTitle')
@@ -55,7 +61,7 @@ describe('Cart.vue', () => {
         const actual = wrapper.find('.bookPrice')
         const actualText = actual.text()
 
-        expect(actualText).toBe(expected)
+        expect(actualText).toContain(expected)
 
     })
 
@@ -65,9 +71,10 @@ describe('Cart.vue', () => {
         const expected = "Hard cover";
 
         const actual = wrapper.find('.bookType')
+        console.log('text',actual)
         const actualText = actual.text()
 
-        expect(actualText).toMatch(expected)
+        expect(actualText).toContain(expected)
 
     })
 

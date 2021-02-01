@@ -3,10 +3,10 @@
     <h2>This is your basket</h2>
     <section class="cartItems" v-for="(book, index) in cart" :key="index" :book="book" >
       <div class="items">
-        <p>{{ book.id }}</p>
-        <p class="bookTitle">{{ book.Title }}</p>
-        <p class="bookPrice">{{ book.Price }}</p>
-        <p class="bookType">{{ book.Type }}</p>
+        <p class="bookTitle">{{ book.Title }} <br>
+        <span class="bookType"> ( {{ book.Type }} )</span>
+        </p>
+        <p class="bookPrice"> price: {{ book.Price }} </p>
         <button @click="removeItem(book)" :id="book.id" class="dltBtn">X</button>
       </div>
     </section>
@@ -60,6 +60,13 @@ export default {
     background-color: white;
     box-shadow: 0 0 16px gray;
     float: left;
-    width: 240px;
+    width: 150px;
+}
+span {
+  color:lightskyblue;
+  font-size: 12.5px;
+}
+.bookTitle {
+  font-weight: bold;
 }
 </style>
