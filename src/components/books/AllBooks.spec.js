@@ -69,13 +69,13 @@ describe('AllBooks.vue', () => {
         expect(actualPrice).toBeTruthy();
     })
 
-    
+
     it('should go to individual book when book is clicked', async () => {
         const localVue = createLocalVue()
         localVue.use(VueRouter)
         const router = new VueRouter()
         const wrapper = shallowMount(AllBooks, {
-        
+
             propsData: {
                 book: {
                     "id": 1,
@@ -87,22 +87,19 @@ describe('AllBooks.vue', () => {
         })
         await wrapper.find('div').trigger('click')
         expect(wrapper.vm.$route.path).toBe('/BookInfo/1')
-      })
-
-    
-   it('Should display image of book in the landing page', () => {
-    const wrapper = shallowMount(AllBooks, {
-    propsData: {
-        book: {
-            "id": 1,
-            "Title": "Harry Potter",
-            }
-        }
     })
-    const imgExists = wrapper.find('img');
-    expect(imgExists.exists()).toBe(true)
-    }) 
+
+
+    it('Should display image of book in the landing page', () => {
+        const wrapper = shallowMount(AllBooks, {
+            propsData: {
+                book: {
+                    "id": 1,
+                    "Title": "Harry Potter",
+                }
+            }
+        })
+        const imgExists = wrapper.find('img');
+        expect(imgExists.exists()).toBe(true)
+    })
 }) 
-
-
-

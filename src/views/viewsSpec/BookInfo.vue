@@ -2,7 +2,7 @@
   <div>
     <h1>..Read more about chosen book..</h1>
     <section>
-      <img :src="'/img/'+book.Img" alt="no img avb">
+      <img :src="'/img/' + book.Img" alt="no img avb" />
       <article>
         <h2>{{ book.Title }}</h2>
         <h2>{{ book.Price }} kr</h2>
@@ -30,7 +30,7 @@ export default {
         console.log(this.book)
         return this.books.filter( b => b.id == this.$route.params.id )[0]
       }
-    } */ 
+    } */
 };
 </script>
 
