@@ -2,7 +2,7 @@
     <div class="items">
         <p>{{ book.id }}</p>
         <p class="bookTitle">{{ book.Title }}</p>
-        <p class="bookPrice">{{ book.Price }}</p>
+        <p class="bookPrice">{{ book.Price }} :-</p>
         <p class="bookType">{{ book.Type }}</p>
         <button @click="removeItem(book)" :id="book.id" class="dltBtn">X</button>
     </div>
