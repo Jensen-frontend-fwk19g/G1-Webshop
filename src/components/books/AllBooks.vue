@@ -1,8 +1,9 @@
 <template>
     <div @click="goTo(book.id)" class="books" >
         <h2>{{book.Title}}</h2>
-        <h3>{{book.Price}} kr</h3>
-        <img :src="book.Img" alt="bild">       
+        <h4>Type: {{book.Type}}</h4>
+        <h3>{{book.Price}} :-</h3>
+        <img :src="book.Img" alt="bild">        
     </div>
 </template>
 
