@@ -35,6 +35,13 @@ describe('Cart.vue', () => {
         expect(actual).toBeTruthy();
     });
 
+    it('should display Cart length', () => {
+        const wrapper   = shallowMount(Cart);
+        const expected  = wrapper.vm.cart.length;
+        const actual    = wrapper.find('.cart-lenght').text();
+        expect(parseInt(actual)).toBe(expected);
+    });
+
     it('it should display a book´s title', () => {
 
         const wrapper = shallowMount(Cart, {
@@ -77,6 +84,13 @@ describe('Cart.vue', () => {
         expect(actualText).toContain(expected)
 
     })
+
+    it('should shows X as a text inside the btn', () => {
+        const wrapper   = shallowMount(Cart); 
+        const actual    = wrapper.find('.dltBtn').text();
+        const expected  = "X";
+        expect(actual).toBe(expected);
+    });
 
     it('when click delete btn, the book should remove from cart', async () => {
 

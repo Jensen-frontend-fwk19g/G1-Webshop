@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>This is your basket</h2>
+    <h2>You have <span class="cart-lenght">{{ cartLenght }} </span>  in your basket</h2>
     <section class="cartItems" v-for="(book, index) in cart" :key="index" :book="book" >
       <div class="items">
         <p class="bookTitle">{{ book.Title }} <br>
@@ -21,6 +21,7 @@ export default {
   },
   data() {
     return {
+      items: true,
         cart:[
           {
               "id": 9,
@@ -39,6 +40,12 @@ export default {
               "Title": "Lord of the Rings",
               "Price": 350,
               "Type": "Hard cover"
+          },
+          {
+            "id": 18,
+            "Title": "Wuthering height",
+            "Price": 300,
+            "Type": "Hard cover"
           }
       ]
     }
@@ -47,6 +54,15 @@ export default {
     removeItem(item){
       let index= this.cart.indexOf(item);
       this.cart.splice(index, 1);
+    }
+  },
+  computed: {
+    cartLenght(){
+      if(this.items){
+        return this.cart.length;
+      }else{
+        return 0;
+      }
     }
   }
 }
