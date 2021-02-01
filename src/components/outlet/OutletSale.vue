@@ -2,8 +2,11 @@
   <div class="books">
     <h2>{{book.Title}}</h2>
     <h3>{{book.Price}}</h3>
-
-    <img src="/assets/lor.jpg" alt="hp">
+    <img src="../../assets/lor.jpg" alt="hp">
+     <div >
+        <button @click="add(book)" class="addButton">Add to cart
+        </button>
+      </div>
   </div>
 </template>
 
@@ -13,6 +16,13 @@ export default {
   props: {
     book: Object
   },
+  methods: {
+  add(cartItem) {
+    this.$store.dispatch("addToCart", cartItem);
+  }
+}
+
+
 };
 </script>
 
@@ -37,4 +47,33 @@ img {
     width: 200px;
     height: 160px;
   }
+
+.addButton {
+  float: right;
+	display: block;
+	text-decoration: none;
+	background: #2f5289;
+	color: #eeeeee;
+	text-transform: uppercase;
+  font-weight: bold;
+	font-size: 15px;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	transition: .7s;
+  letter-spacing: 1px;
+  width: 180px;
+  margin-right: 30px;
+  align-self: start;
+  }
+.addButton:hover {
+	background: #2c3339;
+	color: #ffffff;
+	transition: .7s;
+	cursor: pointer;
+}
+.addButton span {
+	float: left; 
+}
+
+
 </style>
