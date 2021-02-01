@@ -55,6 +55,11 @@ img {
   width: 50%;
 }
 
+h1, h3 {
+  color: #3d2f27
+}
+
+
 h3 {
   margin: 0;
   padding: 0;

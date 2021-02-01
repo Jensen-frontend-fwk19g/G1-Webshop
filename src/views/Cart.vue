@@ -43,4 +43,8 @@ export default {
 
 <style>
 
+h2 {
+  color: #30251f
+}
+
 </style>

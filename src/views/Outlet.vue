@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>This is Outlet</h1>
+    <h1>..Everything in outlet..</h1>
       <OutletSale v-for="book in books" :key='book.id' :book="book" v-show="book.sale === true"/>
   </section>
 </template>
