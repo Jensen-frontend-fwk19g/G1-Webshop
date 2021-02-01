@@ -2,7 +2,7 @@
   <section>
     <div class="wrapper">
       <div class="search-wrapper">
-        <h1>..All books in our libary..</h1>
+        <h1>..All books in our library..</h1>
         <input
           id="search"
           type="text"
