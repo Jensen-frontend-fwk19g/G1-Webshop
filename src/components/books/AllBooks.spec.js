@@ -2,7 +2,7 @@ import { shallowMount, createLocalVue } from '@vue/test-utils';
 import VueRouter from 'vue-router'
 import AllBooks from './AllBooks.vue'
 
-describe('Books.vue', () => {
+describe('AllBooks.vue', () => {
 
     it('should display all books when mounted', async () => {
         const wrapper = shallowMount(AllBooks, {
@@ -34,6 +34,39 @@ describe('Books.vue', () => {
 
         expect(bookNameExist).toBeTruthy();
         expect(actualTitle).toBe(expectedTitle);
+    })
+
+
+    it('should display the type on all the books when mounted', () => {
+        const wrapper = shallowMount(AllBooks, {
+            propsData: {
+                book: {
+                    "Type": "E-book",
+                }
+            }
+        })
+        const expectedType = 'E-book';
+
+        const actualType = wrapper.find('h4').text();
+        actualType.includes(expectedType)
+
+        expect(actualType).toBeTruthy();
+    })
+
+    it('should display the price on all books when mounted', () => {
+        const wrapper = shallowMount(AllBooks, {
+            propsData: {
+                book: {
+                    "Price": 250,
+                }
+            }
+        })
+        const expectedPrice = 250
+
+        const actualPrice = wrapper.find('h3').text()
+        actualPrice.includes(expectedPrice)
+
+        expect(actualPrice).toBeTruthy();
     })
 
     
