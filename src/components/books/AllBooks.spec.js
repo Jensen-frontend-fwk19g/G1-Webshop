@@ -36,6 +36,7 @@ describe('Books.vue', () => {
         expect(actualTitle).toBe(expectedTitle);
     })
 
+    
     it('should go to individual book when book is clicked', async () => {
         const localVue = createLocalVue()
         localVue.use(VueRouter)
