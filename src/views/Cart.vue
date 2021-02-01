@@ -1,17 +1,20 @@
 <template>
-  <div>
+  <article>
     <h2>You have <span class="cart-lenght">{{ cartLenght }} </span>  in your basket</h2>
-    <section class="cartItems" v-for="(book, index) in cart" :key="index" :book="book" >
-      <div class="items">
-        <p class="bookTitle">{{ book.Title }} <br>
-        <span class="bookType"> ( {{ book.Type }} )</span>
-        </p>
-        <p class="bookPrice"> price: {{ book.Price }} </p>
-        <button @click="removeItem(book)" :id="book.id" class="dltBtn">X</button>
-      </div>
-    </section>
+    <div class="cartItems">
+      <section v-for="(book, index) in cart" :key="index" :book="book" >
+        <div class="items">
+          <p class="bookTitle">{{ book.Title }} <br>
+          <span class="bookType"> ( {{ book.Type }} )</span>
+          </p>
+          <p class="bookPrice"> price: {{ book.Price }} </p>
+          <button @click="removeItem(book)" :id="book.id" class="dltBtn">X</button>
+        </div>
+      </section>
+    </div>
+
     <p class="totalPrice">total price: {{ totalPrice }}</p>
-  </div>
+  </article>
 </template>
 
 <script>
@@ -80,20 +83,31 @@ export default {
 </script>
 
 <style scoped>
-.items {
-    margin: 15px;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    background-color: white;
-    box-shadow: 0 0 16px gray;
-    float: left;
-    width: 150px;
+article {
+  display: flex;
+  flex-direction: column;
 }
-span {
+
+.cartItems {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.items {
+  margin: 15px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: white;
+  box-shadow: 0 0 16px gray;
+  /*float: left;*/
+  width: 150px;
+}
+.bookType {
   color:lightskyblue;
   font-size: 12.5px;
 }
 .bookTitle {
   font-weight: bold;
 }
+
 </style>

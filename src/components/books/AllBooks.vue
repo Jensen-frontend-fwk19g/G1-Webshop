@@ -3,7 +3,7 @@
         <h2 @click="goTo(book.id)" >{{book.Title}}</h2>
         <h3>{{book.Price}} kr</h3>
         <img :src="'/img/'+ book.Img" alt="bild">
-        <button @click="addToCart">add to cart</button>        
+        <button @click="addToCart(book.id)">add to cart</button>        
     </div>
 </template>
 
@@ -15,53 +15,44 @@ export default {
     },
     data() {
         return {
-            cart:[
-                {
-                    "id": 9,
-                    "Title": "Gone with the Wind",
-                    "Price": 400,
-                    "Type": "Hard cover"
-                },
-                {
-                    "id": 1,
-                    "Title": "Harry Potter",
-                    "Price": 250,
-                    "Type": "Pocket"
-                },
-                {
-                    "id": 6,
-                    "Title": "Lord of the Rings",
-                    "Price": 350,
-                    "Type": "Hard cover"
-                }
-            ],
-            cartadd: {
-                id: '',
-                Title: '',
-                Price: '',
-                Type: ''
-            }
+            cart:[]
         }
     },
     methods: {
         goTo(id){
             this.$router.push(`/BookInfo/${id}`)
         },
-        /*addToCart(item) {
-            /*let cartItem = state.cart.find(item => item.id === product.id)
-            if(cartItem) {
-            cartItem.quantity++;
+        addToCart(item) {
+
+            /*this.cartadd.id = item.id
+            this.cartadd.Title = item.Title
+            this.cartadd.Price = item.Price
+            this.cartadd.Type = item.Type
+            this.cart.push(this.cartadd)
+            this.cartadd = {}
+            console.log(item)
+            let cartItem = this.cart.forEach(book => book.id == item.id);
+            console.log(cartItem,'kkkkkk')
+
+            if (cartItem) {
+                cartItem.quantity++
+            } 
+            else
+            {
+                //else add to cart with quantity 1
+                //product.quantity = 1;
+                this.cart.push({
+                id: item.id,
+                price: item.Price,
+                title: item.Title,
+                quantity: 1
+                });
             }*/
+            this.cart.push(item);
+            console.log(this.card,'ooo')
             
-            /*let cartItem = this.cart.find( book => book.id === item.id)
-            /*let index= this.book.indexOf(item);
-            console.log(cartItem,'nnnnn')
-            if(cartItem) {
-                cartItem.quantity++;
-            }*/
-        
+        }
     }
-    
 }
 </script>
 
