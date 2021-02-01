@@ -1,8 +1,8 @@
 <template>
     <div @click="goTo(book.id)" class="books" >
         <h2>{{book.Title}}</h2>
-        <h3>{{book.Price}}</h3>
-        <img :src="'/img/'+book.Img" alt="bild">
+        <h3>{{book.Price}} kr</h3>
+        <img :src="'/img/'+book.Img" alt="bild">        
     </div>
 </template>
 
@@ -28,6 +28,7 @@ export default {
     box-shadow: 0 0 7px rgba(43, 41, 41, 0.623);
     float: left;
     width: 240px;
+    color: #3d2f27;
 }
   
   

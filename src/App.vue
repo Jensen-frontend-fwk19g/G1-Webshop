@@ -10,21 +10,15 @@
     </header>
 
     <router-view :books="books" />
-    <router-view :books="outletBooks" />
   </div>
 </template>
 
 <script>
 import books from '@/assets/products.json'
-
-
 export default {
   computed: {
     books() {
       return books.products
-    },
-    outletBooks () {
-      return books.outlet
     }
 
   }
