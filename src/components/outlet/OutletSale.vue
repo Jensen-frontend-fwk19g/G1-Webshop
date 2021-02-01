@@ -4,20 +4,19 @@
     <h3>{{book.Price}}</h3>
     <img :src="book.Img" alt="bild">  
   </div>  
-
-
 </template>
 
 <script>
 export default {
-  name: 'OutletSale',
+  name: "OutletSale",
   props: {
-    book: Object
-  }
+    book: Object,
+  },
 };
 </script>
 
 <style scoped>
+
 .books {
     margin: 15px;
     padding: 1rem;
@@ -28,10 +27,9 @@ export default {
     width: 240px;
     color: #3d2f27;
 }
-  
-  
+
 .books img {
-    width: 200px;
-    height: 160px;
-  }
+  width: 200px;
+  height: 160px;
+}
 </style>
