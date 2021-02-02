@@ -82,7 +82,7 @@ describe('OutletSale.vue', () => {
         expect(bookElementsLength).toBe(imagesNumber);
     })
     
-    it('its should display the price of the book', async () => {
+    it('it should display the price of the book', async () => {
         const wrapper = shallowMount(OutletSale, {
             propsData: {
                 book: {

@@ -1,9 +1,8 @@
 <template>
     <div @click="goTo(book.id)" class="books" >
         <h2>{{book.Title}}</h2>
-        <h4>Type: {{book.Type}}</h4>
-        <h3>{{book.Price}} :-</h3>
-        <img :src="book.Img" alt="bild">        
+        <h3>{{book.Price}} kr</h3>
+        <img :src="'/img/'+book.Img" alt="bild">        
     </div>
 </template>
 
@@ -11,8 +10,13 @@
 export default {
     props: {
         book: Object
-    }
-};
+    },
+    methods: {
+        goTo(id){
+            this.$router.push(`/BookInfo/${id}`)
+        }
+    },
+}
 </script>
 
 <style scoped>
@@ -29,7 +33,8 @@ export default {
   
   
 .books img {
-  width: 200px;
-  height: 160px;
-}
+    width: 200px;
+    height: 160px;
+  }
+
 </style>
