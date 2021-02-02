@@ -12,16 +12,16 @@
 </template>
 
 <script>
-import OutletSale from "./../components/outlet/OutletSale";
+import OutletSale from './../components/outlet/OutletSale'
 
 export default {
-  props: {
-    books: Array,
-  },
+  props: { 
+    books: Array
+  }, 
   components: {
-    OutletSale,
-  },
-};
+    OutletSale
+  }  
+}
 </script>
 
 <style>

@@ -2,12 +2,12 @@
   <div>
     <h1>..Read more about chosen book..</h1>
     <section>
-      <img :src="bookInfo.Img" alt="no img avb">
-      <article class="infoSection">
-        <h2>{{ bookInfo.Title || book.Title }}</h2>
-        <h2>{{ bookInfo.Price }} kr</h2>
+      <img :src="'/img/'+book.Img" alt="no img avb">
+      <article>
+        <h2>{{ book.Title }}</h2>
+        <h2>{{ book.Price }} kr</h2>
         <h3>Description:</h3>
-        <p>{{ bookInfo.Description }}</p>
+        <p>{{ book.Description }}</p>
       </article>
     </section>
   </div>
@@ -16,30 +16,21 @@
 <script>
 export default {
   props: {
-      books: Array,
-      book : {
+    book: {
       default: () => ({
-        Title: "ERROR",
+        Title: "error",
         Price: "Price not applcable",
-        Description: "No description available",
+        Description: "no description available",
       }),
-      type: Object, 
-      }
-  },
-  computed: {
-    bookInfo() {
-      let chosenBook = {
-        Title : this.infoChosen.Title,
-        Price : this.infoChosen.Price,
-        Description : this.infoChosen.Description,
-        Img : this.infoChosen.Img
-      }
-      return chosenBook;
+      type: Object,
     },
-    infoChosen(){ 
-        return this.books.filter(b => b.id == this.$route.params.id)[0]
+  },
+  /*computed: {
+    book(){ 
+        console.log(this.book)
+        return this.books.filter( b => b.id == this.$route.params.id )[0]
       }
-    }
+    } */ 
 };
 </script>
 
@@ -51,16 +42,11 @@ section {
   margin-left: 10%;
 }
 article {
-  margin: 5rem;
+  margin: 10rem;
   border: solid 2px #3d2f27;
   padding: 3rem;
 }
 div {
   color: #3d2f27;
-}
-img {
-  margin-top: 0;
-  max-width: 50%;
-  max-height: 50%;
 }
 </style>

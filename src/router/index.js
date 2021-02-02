@@ -20,7 +20,7 @@ const routes = [
     component: () => import('../views/viewsSpec/BookInfo.vue')
   },
   {
-    path: '/cart/:id',
+    path: '/cart',
     name: 'Cart',
     component: () => import('../views/Cart.vue')
   },
@@ -33,7 +33,7 @@ const routes = [
 
 
 const router = new VueRouter({
-  routes
+  routes 
 })
 
 export default router

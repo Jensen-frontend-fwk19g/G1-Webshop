@@ -24,5 +24,7 @@ describe('AboutText.vue', () => {
         const expectedNumber = 1;
         const actualNumber = image.length;
         expect(actualNumber).toBe(expectedNumber);
+
     })
+
 })
