@@ -2,7 +2,7 @@
     <div class="books" >
         <h2 @click="goTo(book.id)" >{{book.Title}}</h2>
         <h3>{{book.Price}} kr</h3>
-        <img :src="'/img/'+ book.Img" alt="bild">
+        <img :src="book.Img" alt="bild">
         <button @click="addToCart(book.id)">add to cart</button>        
     </div>
 </template>
