@@ -2,18 +2,18 @@
   <section>
     <div class="wrapper">
       <div class="search-wrapper">
-        <h1>..All books in our libary..</h1>
+        <h1>..All books in our library..</h1>
         <input
           id="search"
           type="text"
           v-model="search"
-          placeholder="Sök här med Title.."
+          placeholder="Search for a title.."
           @input="filter()"
         />
       </div>
     </div>
     <div v-if="!filteredList || !filteredList.length">
-      <h2 style="color: red">Inga böcker tillgängliga</h2>
+      <h2 style="color: red">No books available</h2>
     </div>
     <div v-else>
       <AllBooks v-for="book in filteredList" :key="book.id" :book="book" />
