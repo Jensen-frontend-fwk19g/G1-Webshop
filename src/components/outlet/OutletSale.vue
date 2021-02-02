@@ -1,7 +1,7 @@
 <template>
   <div class="books">  
     <h2>{{book.Title}}</h2>
-    <h3>{{book.Price}}</h3>
+    <h3>{{book.Price}} kr</h3>
     <img :src="book.Img" alt="bild">  
   </div>  
 </template>
