@@ -1,4 +1,5 @@
-import { shallowMount } from '@vue/test-utils';
+import { shallowMount, createLocalVue } from '@vue/test-utils';
+import VueRouter from 'vue-router';
 import OutletSale from './OutletSale.vue';
 
 describe('OutletSale.vue', () => {
@@ -7,8 +8,8 @@ describe('OutletSale.vue', () => {
         const wrapper = shallowMount(OutletSale, {
             propsData: {
                 book: {
-                    "id": 1,
-                    "Title": "Harry Potter",
+                    "id": 11,
+                    "Title": "Doctor Sleep",
                 }
             }
         });
@@ -20,8 +21,8 @@ describe('OutletSale.vue', () => {
         const wrapper = shallowMount(OutletSale, {
             propsData: {
                 book: {
-                    "id": 1,
-                    "Title": "Harry Potter",
+                    "id": 11,
+                    "Title": "Doctor Sleep",
                 }
             }
         });
@@ -35,7 +36,7 @@ describe('OutletSale.vue', () => {
         const wrapper = shallowMount(OutletSale, {
             propsData: {
                 book: {
-                    "id": 1,
+                    "id": 11,
                     "Title": "Doctor Sleep",
                 }
             }
@@ -54,8 +55,8 @@ describe('OutletSale.vue', () => {
         const wrapper = shallowMount(OutletSale, {
             propsData: {
                 book: {
-                    "id": 1,
-                    "Title": "Harry Potter",
+                    "id": 11,
+                    "Title": "Doctor Sleep",
                 }
             }
         });
@@ -69,8 +70,8 @@ describe('OutletSale.vue', () => {
         const wrapper = shallowMount(OutletSale, {
             propsData: {
                 book: {
-                    "id": 1,
-                    "Title": "Harry Potter",
+                    "id": 11,
+                    "Title": "Doctor Sleep",
                 }
             }
         });
@@ -91,8 +92,8 @@ describe('OutletSale.vue', () => {
         const wrapper = shallowMount(OutletSale, {
             propsData: {
                 book: {
-                    "id": 1,
-                    "Title": "Harry Potter",
+                    "id": 11,
+                    "Title": "Doctor Sleep",
                 }
             }
         });
@@ -100,30 +101,63 @@ describe('OutletSale.vue', () => {
         expect(bookPrice).toBe(true); 
     })
 
-    // it('it should allow clicking and selecting the book', async () => {
-    //     const wrapper = shallowMount(OutletSale, {
-    //         propsData: {
-    //             book: {
-    //                 "id": 1,
-    //                 "Title": "Harry Potter",
-    //             }
-    //         }
-    //     });
-    // })
+    it('it should allow clicking on a book', async () => {
+        const wrapper = shallowMount(OutletSale, {
+            propsData: {
+                book: {
+                    "id": 11,
+                    "Title": "Doctor Sleep",
+                }
+            }
+        });
+
+        await wrapper.find('div').trigger('click');
+    })
+
+    it('it should send the book to the cart', async () => {
+        const localVue = createLocalVue()
+        localVue.use(VueRouter)
+
+        // await wrapper.find('div').trigger('click');
+        
+        const $route = {
+            path: '/Cart/11'
+            // `/Cart/${id}`
+        }
+
+        const wrapper = shallowMount(OutletSale, {
+            propsData: {
+                book: {
+                    "id": 11,
+                    "Title": "Doctor Sleep",
+                }
+            },
+            mocks: {
+                $route
+            }
+        });
+        wrapper.vm.$route.path
+    })
+
 
     // it('it should send the book to the cart', async () => {
+    //     const localVue = createLocalVue()
+    //     localVue.use(VueRouter)
+    //     const router = new VueRouter()
+       
     //     const wrapper = shallowMount(OutletSale, {
     //         propsData: {
     //             book: {
-    //                 "id": 1,
-    //                 "Title": "Harry Potter",
+    //                 "id": 11, 
+    //                 "Title": "Doctor Sleep",
     //             }
-    //         }
-    //     });
-    // })
+    //         },
+    //         localVue,
+    //         router
+    //     })
 
-
-    // it('should ', () => {
-    //     const wrapper = shallowMount(OutletSale);
+    //     await wrapper.find('div').trigger('click')
+    //     expect(wrapper.vm.$route.path).toBe( '/Cart/11')
+        
     // })
 })

@@ -1,7 +1,7 @@
 import {shallowMount} from '@vue/test-utils';
 import BookInfo from './BookInfo.vue'
 
-describe('BookInfo.vue', () => {
+/*describe('BookInfo.vue', () => {
     it('Should show name of chosen book', async () =>  {
         const wrapper = shallowMount(BookInfo, {
         propsData: {
@@ -13,8 +13,8 @@ describe('BookInfo.vue', () => {
         const information = await wrapper.find('h2').text();
         const expected = 'Harry Potter'
         expect(information).toMatch(expected);
-    })
-/*
+    }) 
+
     it('Should display the bookcover-image of chosen book', () => {
         const wrapper = shallowMount(BookInfo);
         const image = wrapper.findAll('img');
@@ -29,5 +29,5 @@ describe('BookInfo.vue', () => {
         
         const infoSquare = wrapper.find('.infoSection')
         expect(infoSquare).toBe(true);
-    }) */
-})
+    }) 
+}) */

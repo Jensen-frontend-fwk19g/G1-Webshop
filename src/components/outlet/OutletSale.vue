@@ -1,9 +1,8 @@
 <template>
-  <div class="books">
+  <div class="books" @click="goToCart(book.id)">
     <h2>{{ book.Title }}</h2>
-    <h4>Type: {{ book.Type }}</h4>
-    <h3>{{ book.Price }} :-</h3>
-    <img :src="book.Img" alt="bild" />
+    <h3>{{ book.Price }}</h3>
+    <img :src="'/img/' + book.Img" alt="bild"/>
   </div>
 </template>
 
@@ -12,6 +11,13 @@ export default {
   name: "OutletSale",
   props: {
     book: Object,
+  },
+  methods: {
+    goToCart(id) {
+      this.$router.push(`/Cart/${id}`)
+      //goes in cart
+    // console.log(`/Cart/${id}`)
+    },
   },
 };
 </script>
