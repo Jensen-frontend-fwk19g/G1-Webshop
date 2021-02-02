@@ -6,14 +6,20 @@
       <router-link to="/outlet">Outlet</router-link> |
       <router-link to="/cart">Cart</router-link> 
     </div>
-    <router-view/>
+    <router-view :books="books"/>
   </div>
 </template>
 
 <script>
+import books from '@/assets/products.json'
 export default {
-  
-}
+  computed: {
+    books() {
+      return books.products
+    }
+
+  }
+};
 </script>
 
 <style>
