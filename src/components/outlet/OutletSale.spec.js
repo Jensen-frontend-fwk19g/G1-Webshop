@@ -16,7 +16,6 @@ describe('OutletSale.vue', () => {
         expect(wrapper.is(OutletSale)).toBe(true);
     })
 
-
     it('it should conatin a div named books', async () => {
         const wrapper = shallowMount(OutletSale, {
             propsData: {
@@ -31,7 +30,6 @@ describe('OutletSale.vue', () => {
         expect(expectedBookClass).toBeTruthy();
     })
 
-
     it('it should display title of the book correctly', async () => {
         const wrapper = shallowMount(OutletSale, {
             propsData: {
@@ -44,12 +42,9 @@ describe('OutletSale.vue', () => {
 
         const expectedBookTitle = "Doctor Sleep";
         const actualBookTitle = wrapper.find('h2').text();
-        console.log(expectedBookTitle);
-        console.log(actualBookTitle);
 
         expect(expectedBookTitle).toBe(actualBookTitle);    
     })
-
 
     it('it should display all the books', async () => {
         const wrapper = shallowMount(OutletSale, {
@@ -64,7 +59,6 @@ describe('OutletSale.vue', () => {
         const allOutletBooks = wrapper.findAll('h2').exists();
         expect(allOutletBooks).toBe(true); 
     })
-
 
     it('its should display images for the books', async () => {
         const wrapper = shallowMount(OutletSale, {
@@ -82,13 +76,10 @@ describe('OutletSale.vue', () => {
         const bookElementsLength = bookElements.length;
         const imagesNumber = bookImages.length;
         
-        console.log('bookElementLength' + bookElementsLength);
-        console.log('imagesNumber' + imagesNumber);
         expect(bookElementsLength).toBe(imagesNumber);
     })
     
-    
-    it('its should display the price of the book', async () => {
+    it('it should display the price of the book', async () => {
         const wrapper = shallowMount(OutletSale, {
             propsData: {
                 book: {
@@ -118,11 +109,9 @@ describe('OutletSale.vue', () => {
         const localVue = createLocalVue()
         localVue.use(VueRouter)
 
-        // await wrapper.find('div').trigger('click');
         
         const $route = {
             path: '/Cart/11'
-            // `/Cart/${id}`
         }
 
         const wrapper = shallowMount(OutletSale, {
@@ -138,26 +127,4 @@ describe('OutletSale.vue', () => {
         });
         wrapper.vm.$route.path
     })
-
-
-    // it('it should send the book to the cart', async () => {
-    //     const localVue = createLocalVue()
-    //     localVue.use(VueRouter)
-    //     const router = new VueRouter()
-       
-    //     const wrapper = shallowMount(OutletSale, {
-    //         propsData: {
-    //             book: {
-    //                 "id": 11, 
-    //                 "Title": "Doctor Sleep",
-    //             }
-    //         },
-    //         localVue,
-    //         router
-    //     })
-
-    //     await wrapper.find('div').trigger('click')
-    //     expect(wrapper.vm.$route.path).toBe( '/Cart/11')
-        
-    // })
 })
