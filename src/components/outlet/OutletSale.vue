@@ -17,6 +17,9 @@ export default {
     book: Object
   },
   methods: {
+    goToCart(id) {
+      //this.$router.push(`/BookInfo/${id}`);
+    },
   add(cartItem) {
     this.$store.dispatch("addToCart", cartItem);
   }

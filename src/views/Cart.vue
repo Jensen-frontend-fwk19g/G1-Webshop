@@ -1,12 +1,12 @@
 <template>
   <div>
       <h2>This is cart</h2>
-       <CartItems v-for="item in cartItems" :key='item.id' :item="item" />
+       <CartItems v-for="book in cartItems" :key='book.id' :book="book" />
   </div>
 </template>
 
 <script>
-import CartItems from './../components/cart/CartItems'
+import CartItems from './../components/cartpage/CartItem'
 export default {
   name: "Cart",
   components: {
