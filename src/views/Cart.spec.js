@@ -92,6 +92,18 @@ describe('Cart.vue', () => {
         expect(actual).toBe(expected);
     });
 
+    it('when click delete btn, should one item remove', async () => {
+        const wrapper = shallowMount(Cart)
+        const items = wrapper.findAll('.items').length;
+        const expectedItems = 3
+
+        const removeBtn = wrapper.find('.dltBtn')
+        await removeBtn.trigger('click')
+
+        const actual = parseInt(items)-1;
+        expect(actual).toBe(expectedItems);
+    })
+
     it('when click delete btn, the book should remove from cart', async () => {
 
         const wrapper = shallowMount(Cart)
