@@ -47,7 +47,7 @@ describe('CartItem.vue', () => {
 
     })
 
-/*
+
     it('it should display a book´s price', async () => {
 
         const wrapper = await shallowMount(CartItem, {
@@ -65,7 +65,6 @@ describe('CartItem.vue', () => {
         expect(actualText).toBe(expected)
 
     })
-    */
 
 
     it('it should display a book´s type', async () => {

@@ -87,4 +87,8 @@ article {
   display: flex;
   flex-direction: column;
 }
+
+h2 {
+  color: #30251f;
+}
 </style>
