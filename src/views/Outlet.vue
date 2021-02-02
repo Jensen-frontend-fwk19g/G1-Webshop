@@ -6,6 +6,7 @@
       :key="book.id"
       :book="book"
       v-show="book.sale === true"
+      class="outletSale"
     />
   </section>
 </template>
