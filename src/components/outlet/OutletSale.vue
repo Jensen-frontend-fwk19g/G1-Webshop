@@ -1,9 +1,9 @@
 <template>
-  <div class="books">
-    <h2>{{book.Title}}</h2>
-    <h3>{{book.Price}}</h3>
-    <img src="../../assets/lor.jpg" alt="hp">
-     <div >
+  <div class="books" @click="goToCart(book.id)">
+    <h2>{{ book.Title }}</h2>
+    <h3>{{ book.Price }}</h3>
+    <img :src="book.Img" alt="bild"/>
+    <div >
         <button @click="add(book)" class="addButton">Add to cart
         </button>
       </div>
@@ -36,7 +36,6 @@ export default {
     float: left;
     width: 240px;
 }
-
 img {
     width: 10px;
     height: 10px;
