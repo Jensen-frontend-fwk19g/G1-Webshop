@@ -1,5 +1,4 @@
-import { shallowMount, createLocalVue } from '@vue/test-utils';
-import VueRouter from 'vue-router';
+import { shallowMount } from '@vue/test-utils';
 import OutletSale from './OutletSale.vue';
 
 describe('OutletSale.vue', () => {
@@ -8,21 +7,20 @@ describe('OutletSale.vue', () => {
         const wrapper = shallowMount(OutletSale, {
             propsData: {
                 book: {
-                    "id": 11,
-                    "Title": "Doctor Sleep",
+                    "id": 1,
+                    "Title": "Harry Potter",
                 }
             }
         });
         expect(wrapper.is(OutletSale)).toBe(true);
     })
 
-
     it('it should conatin a div named books', async () => {
         const wrapper = shallowMount(OutletSale, {
             propsData: {
                 book: {
-                    "id": 11,
-                    "Title": "Doctor Sleep",
+                    "id": 1,
+                    "Title": "Harry Potter",
                 }
             }
         });
@@ -31,12 +29,11 @@ describe('OutletSale.vue', () => {
         expect(expectedBookClass).toBeTruthy();
     })
 
-
     it('it should display title of the book correctly', async () => {
         const wrapper = shallowMount(OutletSale, {
             propsData: {
                 book: {
-                    "id": 11,
+                    "id": 1,
                     "Title": "Doctor Sleep",
                 }
             }
@@ -50,13 +47,12 @@ describe('OutletSale.vue', () => {
         expect(expectedBookTitle).toBe(actualBookTitle);    
     })
 
-
     it('it should display all the books', async () => {
         const wrapper = shallowMount(OutletSale, {
             propsData: {
                 book: {
-                    "id": 11,
-                    "Title": "Doctor Sleep",
+                    "id": 1,
+                    "Title": "Harry Potter",
                 }
             }
         });
@@ -65,13 +61,12 @@ describe('OutletSale.vue', () => {
         expect(allOutletBooks).toBe(true); 
     })
 
-
     it('its should display images for the books', async () => {
         const wrapper = shallowMount(OutletSale, {
             propsData: {
                 book: {
-                    "id": 11,
-                    "Title": "Doctor Sleep",
+                    "id": 1,
+                    "Title": "Harry Potter",
                 }
             }
         });
@@ -87,13 +82,12 @@ describe('OutletSale.vue', () => {
         expect(bookElementsLength).toBe(imagesNumber);
     })
     
-    
     it('its should display the price of the book', async () => {
         const wrapper = shallowMount(OutletSale, {
             propsData: {
                 book: {
-                    "id": 11,
-                    "Title": "Doctor Sleep",
+                    "id": 1,
+                    "Title": "Harry Potter",
                 }
             }
         });
@@ -101,63 +95,30 @@ describe('OutletSale.vue', () => {
         expect(bookPrice).toBe(true); 
     })
 
-    it('it should allow clicking on a book', async () => {
-        const wrapper = shallowMount(OutletSale, {
-            propsData: {
-                book: {
-                    "id": 11,
-                    "Title": "Doctor Sleep",
-                }
-            }
-        });
-
-        await wrapper.find('div').trigger('click');
-    })
-
-    it('it should send the book to the cart', async () => {
-        const localVue = createLocalVue()
-        localVue.use(VueRouter)
-
-        // await wrapper.find('div').trigger('click');
-        
-        const $route = {
-            path: '/Cart/11'
-            // `/Cart/${id}`
-        }
-
-        const wrapper = shallowMount(OutletSale, {
-            propsData: {
-                book: {
-                    "id": 11,
-                    "Title": "Doctor Sleep",
-                }
-            },
-            mocks: {
-                $route
-            }
-        });
-        wrapper.vm.$route.path
-    })
-
-
-    // it('it should send the book to the cart', async () => {
-    //     const localVue = createLocalVue()
-    //     localVue.use(VueRouter)
-    //     const router = new VueRouter()
-       
+    // it('it should allow clicking and selecting the book', async () => {
     //     const wrapper = shallowMount(OutletSale, {
     //         propsData: {
     //             book: {
-    //                 "id": 11, 
-    //                 "Title": "Doctor Sleep",
+    //                 "id": 1,
+    //                 "Title": "Harry Potter",
     //             }
-    //         },
-    //         localVue,
-    //         router
-    //     })
+    //         }
+    //     });
+    // })
 
-    //     await wrapper.find('div').trigger('click')
-    //     expect(wrapper.vm.$route.path).toBe( '/Cart/11')
-        
+    // it('it should send the book to the cart', async () => {
+    //     const wrapper = shallowMount(OutletSale, {
+    //         propsData: {
+    //             book: {
+    //                 "id": 1,
+    //                 "Title": "Harry Potter",
+    //             }
+    //         }
+    //     });
+    // })
+
+
+    // it('should ', () => {
+    //     const wrapper = shallowMount(OutletSale);
     // })
 })

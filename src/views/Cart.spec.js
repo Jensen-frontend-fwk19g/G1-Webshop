@@ -1,4 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
+
 import Cart from './Cart.vue'
 
 describe('Cart.vue', () => {

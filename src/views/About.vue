@@ -1,21 +1,19 @@
 <template>
   <section>
-    <h1>This is about</h1>
-    <AboutText />
+      <h1>This is about</h1>
+      <AboutText />
   </section>
 </template>
 
 <script>
-import AboutText from "./../components/About/AboutText";
+import AboutText from './../components/About/AboutText'
 export default {
   components: {
-    AboutText,
-  },
-};
+    AboutText
+  }
+}
 </script>
 
 <style>
-h1 {
-  color: #30251f;
-}
+
 </style>
