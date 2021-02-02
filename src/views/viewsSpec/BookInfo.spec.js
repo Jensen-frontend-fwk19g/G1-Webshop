@@ -1,7 +1,8 @@
 import {shallowMount} from '@vue/test-utils';
 import BookInfo from './BookInfo.vue'
 
-/*describe('BookInfo.vue', () => {
+describe('BookInfo.vue', () => {
+    /*
     it('Should show name of chosen book', async () =>  {
         const wrapper = shallowMount(BookInfo, {
         propsData: {
@@ -27,4 +28,5 @@ import BookInfo from './BookInfo.vue'
         const infoSquare = wrapper.find('.infoSection')
         expect(infoSquare).toBe(true);
     }) 
-}) */
+    */
+}) 

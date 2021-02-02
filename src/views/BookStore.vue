@@ -32,7 +32,7 @@ export default {
     filteredList: Array,
   }),
   components: {
-    AllBooks,
+    AllBooks
   },
   methods: {
     filter() {

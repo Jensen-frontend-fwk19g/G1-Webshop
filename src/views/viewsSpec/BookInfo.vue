@@ -5,7 +5,7 @@
       <img :src="bookInfo.Img" alt="no img avb">
       <article class="infoSection">
         <h2>{{ bookInfo.Title || book.Title }}</h2>
-        <h2>{{ bookInfo.Price }} :-</h2>
+        <h2>{{ bookInfo.Price }} kr</h2>
         <h3>Description:</h3>
         <p>{{ bookInfo.Description }}</p>
       </article>

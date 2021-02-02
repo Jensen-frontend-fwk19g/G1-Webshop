@@ -1,13 +1,13 @@
 <template>
   <article>
-    <h2>You have <span class="cart-lenght">{{ cartLenght }} </span>  in your basket</h2>
+    <h2>You have <span class="cart-lenght">{{ cartLenght }} </span> items in your basket</h2>
     <div class="cartItems">
       <section v-for="(book, index) in cart" :key="index" :book="book" >
         <div class="items">
           <p class="bookTitle">{{ book.Title }} <br>
           <span class="bookType"> ( {{ book.Type }} )</span>
           </p>
-          <p class="bookPrice"> price: {{ book.Price }} </p>
+          <p class="bookPrice"> price: {{ book.Price }} :-</p>
           <button @click="removeItem(book)" :id="book.id" class="dltBtn">X</button>
         </div>
       </section>

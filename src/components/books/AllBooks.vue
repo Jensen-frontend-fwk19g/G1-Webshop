@@ -32,7 +32,8 @@ export default {
   color: #3d2f27;
 }
 .books img {
-  width: 200px;
-  height: 160px;
-}
+    width: 200px;
+    height: 160px;
+  }
+
 </style>
