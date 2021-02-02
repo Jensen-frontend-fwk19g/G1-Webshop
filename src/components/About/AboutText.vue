@@ -15,7 +15,7 @@
       obcaecati hic reprehenderit quae iusto.
     </p>
     <footer>
-      <img src="../../assets/Strict-librarian.jpg" alt="">
+      <img src="../../assets/Strict-librarian.jpg" alt="" />
       <h3 class="name">Jon Doe</h3>
       <p class="role">Manager</p>
     </footer>
@@ -25,14 +25,13 @@
 <script>
 export default {
   name: "AboutText",
-}
+};
 </script>
 
 <style scoped>
 .bold {
   -webkit-text-stroke: medium;
 }
-
 p {
   text-align: justify;
 }
@@ -43,18 +42,19 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
 img {
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
   width: 100px;
-
   margin-left: auto;
   margin-right: auto;
   width: 50%;
 }
-
+h1,
+h3 {
+  color: #3d2f27;
+}
 h3 {
   margin: 0;
   padding: 0;
