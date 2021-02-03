@@ -1,5 +1,5 @@
 <template>
-  <div class="books" @click="goToCart(book.id)">
+  <div class="books" @click="goToCart(book)">
     <h2>{{ book.Title }}</h2>
     <h3>{{ book.Price }}</h3>
     <img :src="book.Img" alt="bild"/>
@@ -17,7 +17,7 @@ export default {
     book: Object
   },
   methods: {
-    goToCart(id) {
+    goToCart() {
       //this.$router.push(`/BookInfo/${id}`);
     },
   add(cartItem) {
