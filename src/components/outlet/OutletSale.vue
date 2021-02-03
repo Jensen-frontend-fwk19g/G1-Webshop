@@ -30,6 +30,7 @@ export default {
 </script>
 
 <style scoped>
+
 .books {
     margin: 15px;
     padding: 1rem;

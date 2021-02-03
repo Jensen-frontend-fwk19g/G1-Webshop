@@ -85,8 +85,6 @@ describe('OutletSale.vue', () => {
 
         const expectedBookTitle = "Doctor Sleep";
         const actualBookTitle = wrapper.find('h2').text();
-        console.log(expectedBookTitle);
-        console.log(actualBookTitle);
 
         expect(expectedBookTitle).toBe(actualBookTitle);    
     })
@@ -121,8 +119,6 @@ describe('OutletSale.vue', () => {
         const bookElementsLength = bookElements.length;
         const imagesNumber = bookImages.length;
         
-        console.log('bookElementLength' + bookElementsLength);
-        console.log('imagesNumber' + imagesNumber);
         expect(bookElementsLength).toBe(imagesNumber);
     })
     
@@ -139,30 +135,39 @@ describe('OutletSale.vue', () => {
         expect(bookPrice).toBe(true); 
     })
 
-    // it('it should allow clicking and selecting the book', async () => {
-    //     const wrapper = shallowMount(OutletSale, {
-    //         propsData: {
-    //             book: {
-    //                 "id": 1,
-    //                 "Title": "Harry Potter",
-    //             }
-    //         }
-    //     });
-    // })
+    it('it should allow clicking on a book', async () => {
+        const wrapper = shallowMount(OutletSale, {
+            propsData: {
+                book: {
+                    "id": 11,
+                    "Title": "Doctor Sleep",
+                }
+            }
+        });
 
-    // it('it should send the book to the cart', async () => {
-    //     const wrapper = shallowMount(OutletSale, {
-    //         propsData: {
-    //             book: {
-    //                 "id": 1,
-    //                 "Title": "Harry Potter",
-    //             }
-    //         }
-    //     });
-    // })
+        await wrapper.find('div').trigger('click');
+    })
 
+    it('it should send the book to the cart', async () => {
+        const localVue = createLocalVue()
+        localVue.use(VueRouter)
 
-    // it('should ', () => {
-    //     const wrapper = shallowMount(OutletSale);
-    // })
+        
+        const $route = {
+            path: '/Cart/11'
+        }
+
+        const wrapper = shallowMount(OutletSale, {
+            propsData: {
+                book: {
+                    "id": 11,
+                    "Title": "Doctor Sleep",
+                }
+            },
+            mocks: {
+                $route
+            }
+        });
+        wrapper.vm.$route.path
+    })
 })

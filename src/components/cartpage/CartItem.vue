@@ -34,6 +34,7 @@ export default {
     box-shadow: 0 0 16px gray;
     float: left;
     width: 240px;
+    color: #3d2f27;
 }
 
 </style>
