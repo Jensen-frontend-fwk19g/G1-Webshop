@@ -14,7 +14,7 @@ describe('Cart.vue', () => {
         expect(cartItemExist).toBeTruthy();
     })
 
-    /***'
+    /***
      *  propsData: {
             book: {
                     "id": 1,

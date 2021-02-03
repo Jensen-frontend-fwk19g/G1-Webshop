@@ -1,6 +1,6 @@
 <template>
-  <div class="books" @click="goToCart(book.id)">
-    <h2>{{ book.Title }}</h2>
+  <div class="books" >
+    <h2 @click="goToCart(book.id)" >{{ book.Title }}</h2>
     <h3>{{ book.Price }}</h3>
     <img :src="book.Img" alt="bild"/>
     <div >
@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     goToCart(id) {
-      //this.$router.push(`/BookInfo/${id}`);
+      this.$router.push(`/BookInfo/${id}`);
     },
   add(cartItem) {
     this.$store.dispatch("addToCart", cartItem);
