@@ -18,41 +18,16 @@
 </template>
 
 <script>
-
+import json from "../assets/products.json"
 export default {
   props: {
-    cartItems: Array
+    cartItem: Array
   },
   data() {
     return {
       items: true,
       totalCost: 0,
-      cart:[
-        {
-            "id": 9,
-            "Title": "Gone with the Wind",
-            "Price": 400,
-            "Type": "Hard cover"
-        },
-        {
-            "id": 1,
-            "Title": "Harry Potter",
-            "Price": 250,
-            "Type": "Pocket"
-        },
-        {
-            "id": 6,
-            "Title": "Lord of the Rings",
-            "Price": 350,
-            "Type": "Hard cover"
-        },
-        {
-          "id": 18,
-          "Title": "Wuthering height",
-          "Price": 300,
-          "Type": "Hard cover"
-        }
-      ]
+      cart: json.cart
     }
   },
   methods: {
@@ -76,10 +51,8 @@ export default {
       })
       return totalCost;
     }
-
   }
 }
-
 </script>
 
 <style scoped>
@@ -87,12 +60,10 @@ article {
   display: flex;
   flex-direction: column;
 }
-
 .cartItems {
   display: flex;
   flex-wrap: wrap;
 }
-
 .items {
   margin: 15px;
   padding: 1rem;
@@ -109,5 +80,5 @@ article {
 .bookTitle {
   font-weight: bold;
 }
-
 </style>
+

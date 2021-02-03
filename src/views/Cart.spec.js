@@ -1,7 +1,12 @@
-import { shallowMount } from '@vue/test-utils';
+import { shallowMount, createLocalVue } from '@vue/test-utils';
+import Vuex from 'vuex';
+
+const localVue = createLocalVue();
+localVue.use(Vuex);
 import Cart from './Cart.vue'
 
 describe('Cart.vue', () => {
+
     it('should display h2 when the page monuted', () => {
         const wrapper = shallowMount(Cart);
         const text = wrapper.find('h2');
@@ -14,21 +19,8 @@ describe('Cart.vue', () => {
         expect(cartItemExist).toBeTruthy();
     })
 
-    /***
-     *  propsData: {
-            book: {
-                    "id": 1,
-                    "Title": "Harry Potter",
-                    "Price": 250,
-                    "Type": "Pocket"
-                }
-        }
-     */
-
     it('every item should have the delete button', () => {
         const wrapper = shallowMount(Cart);
-        /**
-         * { propsData: {book: { id: 1}}}*/
 
         const actual = wrapper.find('.dltBtn');
         expect(actual).toBeTruthy();
@@ -147,3 +139,4 @@ describe('Cart.vue', () => {
 	})
 
 })
+
