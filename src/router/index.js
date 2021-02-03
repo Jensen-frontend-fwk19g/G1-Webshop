@@ -16,7 +16,7 @@ const routes = [
   },
   {
     path: '/BookInfo/:id',
-    name: 'Book',
+    name: 'BookInfo',
     component: () => import('../views/viewsSpec/BookInfo.vue')
   },
   {
@@ -33,7 +33,7 @@ const routes = [
 
 
 const router = new VueRouter({
-  routes
+  routes 
 })
 
 export default router

@@ -12,7 +12,6 @@
 
 <script>
 import OutletSale from "./../components/outlet/OutletSale";
-
 export default {
   props: {
     books: Array,

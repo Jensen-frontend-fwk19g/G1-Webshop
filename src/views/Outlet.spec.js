@@ -1,3 +1,4 @@
+  
 import { shallowMount } from '@vue/test-utils';
 import Outlet from './Outlet.vue'
 

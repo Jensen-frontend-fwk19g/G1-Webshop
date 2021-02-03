@@ -1,17 +1,17 @@
 <template>
-  <div class="books">  
-    <h2>{{book.Title}}</h2>
-    <h3>{{book.Price}} kr</h3>
-    <img :src="book.Img" alt="bild">  
-  </div>  
+  <div class="books" @click="goToCart(book.id)">
+    <h2>{{ book.Title }}</h2>
+    <h3>{{ book.Price }}</h3>
+    <img :src="book.Img" alt="bild"/>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "OutletSale",
+  name: 'OutletSale',
   props: {
-    book: Object,
-  },
+    book: Object
+  }
 };
 </script>
 
@@ -20,16 +20,24 @@ export default {
 .books {
     margin: 15px;
     padding: 1rem;
-    border: 1px solid rgba(15, 15, 15, 0.329);
-    background-color: #c9c9c750;
-    box-shadow: 0 0 7px rgba(43, 41, 41, 0.623);
+    border: 1px solid #ccc;
+    background-color: white;
+    box-shadow: 0 0 16px gray;
     float: left;
     width: 240px;
+<<<<<<< HEAD
     color: #3d2f27;
+=======
+>>>>>>> dev
 }
-
+img {
+    width: 10px;
+    height: 10px;
+}
+  
+  
 .books img {
-  width: 200px;
-  height: 160px;
-}
+    width: 200px;
+    height: 160px;
+  }
 </style>

@@ -32,7 +32,6 @@ export default {
 .bold {
   -webkit-text-stroke: medium;
 }
-
 p {
   text-align: justify;
 }
@@ -43,23 +42,19 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
 img {
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
   width: 100px;
-
   margin-left: auto;
   margin-right: auto;
   width: 50%;
 }
-
 h1,
 h3 {
   color: #3d2f27;
 }
-
 h3 {
   margin: 0;
   padding: 0;
