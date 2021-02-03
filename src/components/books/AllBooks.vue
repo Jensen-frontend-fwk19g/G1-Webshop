@@ -9,10 +9,10 @@
 
 <script>
 export default {
-  props: {
-    book: Object,
-  },
-  methods: {
+    props: {
+        book: Object
+    },
+    methods: {
     goTo(id) {
       this.$router.push(`/BookInfo/${id}`);
     },
@@ -31,9 +31,9 @@ export default {
   width: 240px;
   color: #3d2f27;
 }
-
 .books img {
-  width: 200px;
-  height: 160px;
-}
+    width: 200px;
+    height: 160px;
+  }
+
 </style>

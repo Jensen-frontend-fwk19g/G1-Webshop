@@ -1,3 +1,4 @@
+
 import { mount, shallowMount } from '@vue/test-utils'
 import Outlet from './Outlet.vue'
 import OutletSale from './../components/outlet/OutletSale.vue'

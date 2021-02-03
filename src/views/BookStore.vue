@@ -23,7 +23,6 @@
 
 <script>
 import AllBooks from "./../components/books/AllBooks";
-
 export default {
   props: {
     books: Array,
@@ -33,7 +32,7 @@ export default {
     filteredList: Array,
   }),
   components: {
-    AllBooks,
+    AllBooks
   },
   methods: {
     filter() {
@@ -64,7 +63,6 @@ export default {
   justify-content: center;
   color: #3d2f27;
 }
-
 .wrapper h1 {
   margin-left: 20%;
   width: 60%;
@@ -77,7 +75,6 @@ export default {
   display: flex;
   flex-direction: column;
 }
-
 .wrapper .search-wrapper input {
   padding: 1rem;
   color: rgba(0, 0, 0, 0.7);
