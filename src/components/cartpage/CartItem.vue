@@ -4,15 +4,24 @@
         <p class="bookTitle">{{ book.Title }}</p>
         <p class="bookPrice">{{ book.Price }}</p>
         <p class="bookType">{{ book.Type }}</p>
+        <div style="display: flex; margin-left: 70px">
+           <h3>Quantity: </h3> <h3>{{book.quantity}}</h3>
+        </div>
         <button @click="removeItem(book)" :id="book.id" class="dltBtn">X</button>
     </div>
 </template>
 
 <script>
 export default {
+    name: 'CartItems',
     props: {
         book: Object
+    },
+ computed: {
+    cartItems() {
+      return this.$store.state.cartItems;
     }
+}
 }
 </script>
 
