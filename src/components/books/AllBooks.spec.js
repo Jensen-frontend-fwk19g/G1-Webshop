@@ -2,7 +2,7 @@ import { shallowMount, createLocalVue } from '@vue/test-utils';
 import VueRouter from 'vue-router'
 import AllBooks from './AllBooks.vue'
 
-describe('Books.vue', () => {
+describe('AllBooks.vue', () => {
 
     it('should display all books when mounted', async () => {
         const wrapper = shallowMount(AllBooks, {
@@ -16,8 +16,6 @@ describe('Books.vue', () => {
         const allBooksExists = wrapper.findAll('.books').exists();
         expect(allBooksExists).toBeTruthy();
     })
-
-
 
     it('should display title on all books when mounted', () => {
         const wrapper = shallowMount(AllBooks, {
@@ -36,6 +34,7 @@ describe('Books.vue', () => {
         expect(bookNameExist).toBeTruthy();
         expect(actualTitle).toBe(expectedTitle);
     })
+
 
     it('should display the type on all the books when mounted', () => {
         const wrapper = shallowMount(AllBooks, {
@@ -91,6 +90,7 @@ describe('Books.vue', () => {
         expect(wrapper.vm.$route.path).toBe('/BookInfo/1')
       })
 
+      
     it('Should display image of book in the landing page', () => {
         const wrapper = shallowMount(AllBooks, {
             propsData: {
