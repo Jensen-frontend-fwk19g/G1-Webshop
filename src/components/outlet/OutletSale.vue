@@ -25,10 +25,6 @@ export default {
     box-shadow: 0 0 16px gray;
     float: left;
     width: 240px;
-<<<<<<< HEAD
-    color: #3d2f27;
-=======
->>>>>>> dev
 }
 img {
     width: 10px;
