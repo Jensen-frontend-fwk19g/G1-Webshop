@@ -11,7 +11,8 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
-    "vue-router": "^3.2.0"
+    "vue-router": "^3.2.0",
+    "vuex": "^3.5.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -29,16 +30,5 @@
   "description": "webshop",
   "main": ".eslintrc.js",
   "author": "G1",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Jensen-frontend-fwk19g/G1-Webshop.git"
-  },
-  "keywords": [
-    "git"
-  ],
-  "bugs": {
-    "url": "https://github.com/Jensen-frontend-fwk19g/G1-Webshop/issues"
-  },
-  "homepage": "https://github.com/Jensen-frontend-fwk19g/G1-Webshop#readme"
+  "license": "ISC"
 }

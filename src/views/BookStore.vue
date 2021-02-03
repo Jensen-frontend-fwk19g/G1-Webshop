@@ -2,18 +2,18 @@
   <section>
     <div class="wrapper">
       <div class="search-wrapper">
-        <h1>..All books in our libary..</h1>
+        <h1>..All books in our library..</h1>
         <input
           id="search"
           type="text"
           v-model="search"
-          placeholder="Sök här med Title.."
+          placeholder="Search for a title.."
           @input="filter()"
         />
       </div>
     </div>
     <div v-if="!filteredList || !filteredList.length">
-      <h2 style="color: red">Inga böcker tillgängliga</h2>
+      <h2 style="color: red">No books available</h2>
     </div>
     <div v-else>
       <AllBooks v-for="book in filteredList" :key="book.id" :book="book" />
@@ -23,7 +23,6 @@
 
 <script>
 import AllBooks from "./../components/books/AllBooks";
-
 export default {
   props: {
     books: Array,
@@ -33,7 +32,7 @@ export default {
     filteredList: Array,
   }),
   components: {
-    AllBooks,
+    AllBooks
   },
   methods: {
     filter() {
@@ -64,7 +63,6 @@ export default {
   justify-content: center;
   color: #3d2f27;
 }
-
 .wrapper h1 {
   margin-left: 20%;
   width: 60%;
@@ -77,7 +75,6 @@ export default {
   display: flex;
   flex-direction: column;
 }
-
 .wrapper .search-wrapper input {
   padding: 1rem;
   color: rgba(0, 0, 0, 0.7);
