@@ -20,11 +20,12 @@ export default {
 .books {
     margin: 15px;
     padding: 1rem;
-    border: 1px solid #ccc;
-    background-color: white;
-    box-shadow: 0 0 16px gray;
-    float: left;
+    border: 1px solid rgba(15, 15, 15, 0.329);
+    background-color: #c9c9c750;
+    box-shadow: 0 0 7px rgba(43, 41, 41, 0.623);
     width: 240px;
+    float: left;
+    color: #3d2f27;
 }
 img {
     width: 10px;
