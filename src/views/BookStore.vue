@@ -22,6 +22,7 @@
 </template>
 
 <script>
+
 import AllBooks from "./../components/books/AllBooks";
 export default {
   props: {
@@ -32,7 +33,7 @@ export default {
     filteredList: Array,
   }),
   components: {
-    AllBooks
+    AllBooks,
   },
   methods: {
     filter() {
