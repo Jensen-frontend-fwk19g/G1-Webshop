@@ -35,7 +35,6 @@ export default {
         Type: book.Type,
         Img: book.Img
       });
-      console.log("cart", this.cart);
     },
   },
 };
