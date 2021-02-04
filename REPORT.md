@@ -14,18 +14,21 @@ There is also an outlet where you can shop for books on sale.
 
 
 User stories: 
-1. As a user I want the shop to display products that I want to shop
-2. As a user I want to add products to the cart.
-3. As a user I want to be able to search for the product I want
-4. As a user I want to be able to remove a product from my cart
-5. As a user I want to see light colors on interface.
-6. As a user I want to see information from product if i click it
-7. As a user I want to see an image of the product before I buy it. 
-8. As a user I want to have different options on the book style.
-9. As a user I want to see the price of the product. 
-10. As a user I want to see product description. 
-11. As a user I want to see the product image. 
-12. As a user I want to have a sales outlet to choose from.
+1. As a user I want to see an image of the product before I buy it.
+2. As a user I want to see product description.
+3. As a user i want to see all the the sales item on the page.
+4. As a user I want to see only sales books on Outlet page.
+5. As a user i want to see all the the sales item on the page.
+6. As a user I want to see the about page and read description.
+7. As a user I want to have different options on what type of book I want.
+8. As a user I want the shop to display outlet on available books.
+9. As a user I want the shop to display all products that is available to buy.
+10. As a user I want to be able to remove a product from my cart.
+11. As a user I want to be able to se all the cart items.
+12. As a user I want to add products to the cart.
+13. As a user I want to be able to add a Sale item in cart.
+14. As a user I want to be able to search for the product I want.
+
 
 
 Trello:
