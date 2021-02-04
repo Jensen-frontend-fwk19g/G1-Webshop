@@ -29,7 +29,6 @@ export default {
       return chosenBook;
     },
     infoChosen(){ 
-        console.log(this.books + 'hej jag är books');
         if ( this.$route !== undefined ) {
           return this.books.find(b => b.id == this.$route.params.id)
         } else {

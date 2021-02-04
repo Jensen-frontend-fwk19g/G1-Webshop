@@ -4,10 +4,9 @@
     <h4>Type: {{book.Type}}</h4>
     <h3>{{ book.Price }} :-</h3>
     <img :src="book.Img" alt="bild"/>
-    <div >
-        <button @click="add(book)" class="addButton">Add to cart
-        </button>
-      </div>
+    <div>
+        <button @click="add(book)" class="addButton">Add to cart </button>
+    </div>
   </div>
 </template>
 
@@ -42,10 +41,6 @@ export default {
     width: 240px;
     float: left;
     color: #3d2f27;
-}
-img {
-    width: 10px;
-    height: 10px;
 }
   
   
