@@ -102,9 +102,8 @@ describe('AllBooks.vue', () => {
 
         await wrapper.find('.aboutBook').trigger('click')
         expect(wrapper.vm.$route.path).toBe('/BookInfo/1')
-      })
+    })
 
-      
     it('Should display image of book in the landing page', () => {
         const wrapper = shallowMount(AllBooks, {
             propsData: {
