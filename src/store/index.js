@@ -1,15 +1,15 @@
-import Vue from 'vue';
+/*import Vue from 'vue';
 import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
-      cartItems: [],
+      cart: [],
     }, 
     mutations: {
       add(state, item) {
-        state.cartItems.push({
+        state.cart.push({
           id: item.id,
           Title: item.Title,
           Description: item.Description,
@@ -22,18 +22,28 @@ export default new Vuex.Store({
   
     },
     updateItem(state, id) {
-      state.cartItems.find(item => item.id == id).quantity++;
+      state.cart.find(item => item.id == id).quantity++;
     },
   },
     actions: {
-    addToCart(context, item) {
-      let checkItem = context.state.cartItems.filter(check => check.id === item.id)
+      addToCart(context, item) {
+        let checkItem = context.state.cart.filter(check => check.id === item.id)
 
-      if (checkItem.length > 0) {
-          context.commit('updateItem', checkItem[0].id)
-      } else {
-          context.commit('add', item)
+        if (checkItem.length > 0) {
+            context.commit('updateItem', checkItem[0].id)
+        } else {
+            context.commit('add', item)
+        }
       }
+  },
+  /*getters: {
+    cartLengthNr(state) {
+
+    let total = 0;
+      state.cart.forEach(item => {
+          total += item.quantity;
+      });
+      return total;
+
     }
-  }
-})
+  }*/

@@ -21,8 +21,9 @@ export default {
     goToCart() {
       //this.$router.push(`/BookInfo/${id}`);
     },
-  add(cartItem) {
-    this.$store.dispatch("addToCart", cartItem);
+  add(cart) {
+    this.$store.dispatch("addToCart", cart);
+    alert('added to your basket')
   }
 }
 
