@@ -7,13 +7,13 @@
     <div class="cartItems">
       <section v-for="(book, index) in cart" :key="index" :book="book">
         <div class="items">
-          <h2>{{ book.Title }}</h2>
-          <h4>Type: {{ book.Type }}</h4>
-          <h3>{{ book.Price }} :-</h3>
+          <h2 class="bookTitle">{{ book.Title }}</h2>
+          <h4 class="bookType">Type: {{ book.Type }}</h4>
+          <h3 class="bookPrice">{{ book.Price }} :-</h3>
           <img :src="book.Img" alt="bild" />
           <div>
             <button @click="removeItem(book)" :id="book.id" class="dltBtn">
-              Remove
+              X
             </button>
           </div>
         </div>
