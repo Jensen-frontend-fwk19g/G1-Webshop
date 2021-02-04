@@ -1,8 +1,9 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils';
-import VueRouter from 'vue-router'
+/*import { preventExtensions } from 'core-js/fn/reflect';
+import VueRouter from 'vue-router'*/
 import AllBooks from './AllBooks.vue'
 
-describe('Books.vue', () => {
+describe('AllBooks.vue', () => {
 
     it('should display all books when mounted', async () => {
         const wrapper = shallowMount(AllBooks, {
@@ -16,8 +17,6 @@ describe('Books.vue', () => {
         const allBooksExists = wrapper.findAll('.books').exists();
         expect(allBooksExists).toBeTruthy();
     })
-
-
 
     it('should display title on all books when mounted', () => {
         const wrapper = shallowMount(AllBooks, {
@@ -36,6 +35,7 @@ describe('Books.vue', () => {
         expect(bookNameExist).toBeTruthy();
         expect(actualTitle).toBe(expectedTitle);
     })
+
 
     it('should display the type on all the books when mounted', () => {
         const wrapper = shallowMount(AllBooks, {
@@ -70,8 +70,21 @@ describe('Books.vue', () => {
         expect(actualPrice).toBeTruthy();
     })
 
+    it('every book card should have addToCard btn', () => {
+        const wrapper = shallowMount(AllBooks, {
+            propsData: {
+                book: {
+                    "id": 1
+                }
+            }
+        })
 
-    it('should go to individual book when book is clicked', async () => {
+        const actual = wrapper.findAll('.addBtn')
+        expect(actual).toBeTruthy();
+    })
+
+
+    /*it('should go to individual book when book is clicked', async () => {
         const localVue = createLocalVue()
         localVue.use(VueRouter)
         const router = new VueRouter()
@@ -89,8 +102,9 @@ describe('Books.vue', () => {
 
         await wrapper.find('div').trigger('click')
         expect(wrapper.vm.$route.path).toBe('/BookInfo/1')
-      })
+    })*/
 
+      
     it('Should display image of book in the landing page', () => {
         const wrapper = shallowMount(AllBooks, {
             propsData: {
