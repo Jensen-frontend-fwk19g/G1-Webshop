@@ -84,7 +84,8 @@ describe('AllBooks.vue', () => {
     })
 
 
-    /*it('should go to individual book when book is clicked', async () => {
+
+   /* it('should go to individual book when book is clicked', async () => {
         const localVue = createLocalVue()
         localVue.use(VueRouter)
         const router = new VueRouter()
@@ -104,7 +105,6 @@ describe('AllBooks.vue', () => {
         expect(wrapper.vm.$route.path).toBe('/BookInfo/1')
     })*/
 
-      
     it('Should display image of book in the landing page', () => {
         const wrapper = shallowMount(AllBooks, {
             propsData: {

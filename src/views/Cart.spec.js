@@ -1,6 +1,7 @@
 import { shallowMount, mount } from '@vue/test-utils';
 
 import Cart from './Cart.vue'
+import AllBooks from '../components/books/AllBooks.vue'
 
 describe('Cart.vue', () => {
 
@@ -139,9 +140,9 @@ describe('Cart.vue', () => {
         expect(actual).toBe(expected)
     })
     
-    /*it('correct total sum when we have books in basket', async () => {
+    it('correct total sum when we have books in basket', async () => {
 
-        const wrapper = shallowMount(Cart, {
+        /*const wrapper = shallowMount(Cart, {
             propsData: {
                 book: {
                     id: 9,
@@ -154,23 +155,77 @@ describe('Cart.vue', () => {
 
         const expected = "400";
         const actual = wrapper.find(".totalPrice").text()
-        expect(actual).toContain(expected)
+        expect(actual).toContain(expected)*/
 
 
-        /*const wrapper = shallowMount(Cart)
-        const fakeData = {
+        const wrapper = shallowMount(Cart, {
+            propsData:{
+                items: {
+                    id: 9,
+                    Title: "Gone with the Wind",
+                    Price: 400,
+                    Type: "Hard cover"
+                }
+            }
+        })
+
+        const fakeItems =  {
+            id: 9,
+            Title: "Gone with the Wind",
+            Price: 400,
+            Type: "Hard cover"
+        }
+
+        await wrapper.setData({ actual: fakeItems.Price })
+
+        const actual = wrapper.find(".totalPrice").text()
+
+        expect(actual).toContain(fakeItems.Price);
+    })
+
+
+/* it("should emit an event when the add button is pressed", async () => {
+    
+            const wrapper = shallowMount(AllBooks, {
+                propsData: {
+                    item: fakeData()[0],
+                },
+            });
+        
+            const btnAdd = wrapper.find(".addBtn");
+            console.log('add',btnAdd)
+            await btnAdd.trigger("click");
+
+            expect(wrapper.emitted().addToCart).toBeTruthy();
+        });*/
+        
+    it("should display the numbers of items bought in the cardCounter", async () => {
+        const wrapper = shallowMount(Cart, {
+            propsData: {
+                itemArray: fakeData(),
+            },
+        });
+    
+        const arrayLength = fakeData().length;
+    
+        const actualItems = wrapper.find(".cart-lenght").text();
+        
+        expect(parseInt(actualItems)).toBe(arrayLength);
+    });
+        
+
+})
+
+function fakeData() {
+    return [
+        {
             id: 9,
             Title: "Gone with the Wind",
             Price: 400,
             Type: "Hard cover"
         },
-
-    await wrapper.setData({ actual: fakeData.Price })
-
-        const actual = wrapper.find(".totalPrice").text()
-
-        expect(actual).toContain(fakeData.Price);*/
-})
+    ];
+}
 
 
 
