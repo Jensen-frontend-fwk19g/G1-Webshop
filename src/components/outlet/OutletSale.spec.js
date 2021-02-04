@@ -4,6 +4,7 @@ import Vuex from 'vuex';
 
 const localVue = createLocalVue();
 localVue.use(Vuex);
+
 describe('OutletSale.vue', () => {
     let store;
     let actions;
@@ -132,17 +133,20 @@ describe('OutletSale.vue', () => {
         expect(bookPrice).toBe(true);
     })
 
-    it('it should allow clicking on a book', async () => {
-        const wrapper = shallowMount(OutletSale, {
-            propsData: {
-                book: {
-                    "id": 11,
-                    "Title": "Doctor Sleep",
-                }
-            }
-        });
+    // it('it should allow clicking on a book', () => {    
+    //     const wrapper = shallowMount(OutletSale, {
+    //         propsData: {
+    //             book: {
+    //                 "id": 11,
+    //                 "Title": "Doctor Sleep",
+    //             }
+    //         }
+    //     });
 
-        await wrapper.find('div').trigger('click');
-    })
+    //     const addButton = wrapper.find('button');
+    //     addButton.trigger('click');
+    //     expect(addButton).toHaveBeenCalled;
+
+    // })
 
 })
