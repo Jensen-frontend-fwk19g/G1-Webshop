@@ -17,7 +17,6 @@ describe('BookInfo.vue', () => {
                 }],
             }
         })
-        console.log('routes info', wrapper.vm.$route);
         const information = await wrapper.find('h2').text();
         const expected = 'Error'
         expect(information).toMatch(expected);

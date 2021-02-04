@@ -32,9 +32,11 @@ export default {
 .bold {
   -webkit-text-stroke: medium;
 }
+
 p {
   text-align: justify;
 }
+
 /*aligning footer in th middle*/
 footer {
   flex-direction: column;
@@ -42,6 +44,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
 img {
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -51,15 +54,19 @@ img {
   margin-right: auto;
   width: 50%;
 }
+
 h1,
-h3 {
+h3,
+p {
   color: #3d2f27;
 }
+
 h3 {
   margin: 0;
   padding: 0;
   font-size: 1.4rem;
 }
+
 .role {
   margin: 0;
   padding: 0;

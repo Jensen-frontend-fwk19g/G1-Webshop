@@ -1,6 +1,5 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils';
-/*import { preventExtensions } from 'core-js/fn/reflect';
-import VueRouter from 'vue-router'*/
+import VueRouter from 'vue-router'
 import AllBooks from './AllBooks.vue'
 
 describe('AllBooks.vue', () => {
@@ -70,6 +69,7 @@ describe('AllBooks.vue', () => {
         expect(actualPrice).toBeTruthy();
     })
 
+
     it('every book card should have addToCard btn', () => {
         const wrapper = shallowMount(AllBooks, {
             propsData: {
@@ -84,8 +84,7 @@ describe('AllBooks.vue', () => {
     })
 
 
-
-   /* it('should go to individual book when book is clicked', async () => {
+    it('should go to individual book when book is clicked', async () => {
         const localVue = createLocalVue()
         localVue.use(VueRouter)
         const router = new VueRouter()
@@ -101,9 +100,9 @@ describe('AllBooks.vue', () => {
             router
         })
 
-        await wrapper.find('div').trigger('click')
+        await wrapper.find('.aboutBook').trigger('click')
         expect(wrapper.vm.$route.path).toBe('/BookInfo/1')
-    })*/
+    })
 
     it('Should display image of book in the landing page', () => {
         const wrapper = shallowMount(AllBooks, {
