@@ -92,7 +92,7 @@ describe('Cart.vue', () => {
         expect(actual).toBe(expectedItems);
     })
 
-    it('calls deleteBtn when the button clicked', async () => {
+    it('calls deleteBtn when the button clicked', () => {
         const wrapper = mount(Cart, {
             propsData: {
                 book: {
@@ -101,15 +101,9 @@ describe('Cart.vue', () => {
             }
         })
 
-        const deleteTask = jest.fn();
-
-        wrapper.setMethods({
-            deleteTask
-        })
-
-        const btn = wrapper.find('.dltBtn')
-        await btn.trigger('click')
-        expect(jest.fn()).toBeCalled()
+        const spy = jest.spyOn(wrapper.vm, 'removeItem');
+        wrapper.vm.removeItem();
+        expect(spy).toHaveBeenCalled();
     })
 
     it('when click delete btn, the book should remove from cart', async () => {
@@ -147,13 +141,79 @@ describe('Cart.vue', () => {
     
     it('correct total sum when we have books in basket', () => {
 
-        const wrapper = shallowMount(Cart)
+        const fakeData = [
+            {
+                "id": 9,
+                "Title": "Gone with the Wind",
+                "Price": 400,
+                "Type": "Hard cover"
+            },
+            {
+                "id": 1,
+                "Title": "Harry Potter",
+                "Price": 250,
+                "Type": "Pocket"
+            },
+            {
+                "id": 6,
+                "Title": "Lord of the Rings",
+                "Price": 350,
+                "Type": "Hard cover"
+            },
+            {
+                "id": 18,
+                "Title": "Wuthering height",
+                "Price": 300,
+                "Type": "Hard cover"
+                }
+        ];
+        const wrapper = shallowMount(Cart, {
+            propsData: {
+                fakeData
+            }
+        })
+
         const expected = "1300"
 
-        const actual = wrapper.find(".totalPrice").text()
+        const actual = wrapper.find(fakeData.Price).text()
+        console.log('nu',actual)
 
         expect(actual).toContain(expected);
 	})
 
 })
 
+
+
+
+/*function fakeData() {
+    return
+    [
+        {
+            "id": 9,
+            "Title": "Gone with the Wind",
+            "Price": 400,
+            "Type": "Hard cover"
+        },
+        {
+            "id": 1,
+            "Title": "Harry Potter",
+            "Price": 250,
+            "Type": "Pocket"
+        },
+        {
+            "id": 6,
+            "Title": "Lord of the Rings",
+            "Price": 350,
+            "Type": "Hard cover"
+        },
+        {
+            "id": 18,
+            "Title": "Wuthering height",
+            "Price": 300,
+            "Type": "Hard cover"
+            }
+    ]
+
+}
+*/
