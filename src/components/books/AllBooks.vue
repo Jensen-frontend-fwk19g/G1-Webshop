@@ -1,10 +1,14 @@
 <template>
-  <div class="books">
-    <h2 @click="goTo(book.id)">{{ book.Title }}</h2>
-    <h4>Type: {{ book.Type }}</h4>
-    <h3>{{ book.Price }} :-</h3>
-    <img :src="book.Img" alt="bild" />
-    <button class="addBtn" @click="addToCard(book)">Add to cart</button>
+  <div class="books" >
+    <div class="aboutBook" @click="goTo(book.id)">
+      <h2>{{ book.Title }}</h2>
+      <h4>Type: {{ book.Type }}</h4>
+      <h3>{{ book.Price }} :-</h3>
+      <img :src="book.Img" alt="bild" />
+    </div>
+    <div>
+      <button class="addBtn" @click="addToCard(book)">Add to cart</button>
+    </div>
   </div>
 </template>
 
@@ -29,6 +33,7 @@ export default {
         Title: book.Title,
         Price: book.Price,
         Type: book.Type,
+        Img: book.Img
       });
       console.log("cart", this.cart);
     },
