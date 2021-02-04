@@ -1,24 +1,8 @@
-import { createLocalVue, shallowMount } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import OutletSale from './OutletSale.vue';
-import Vuex from 'vuex';
-
-const localVue = createLocalVue();
-localVue.use(Vuex);
 
 describe('OutletSale.vue', () => {
-    let store;
-    let actions;
-    beforeEach(() => {
-        actions = {
-            addToCart: jest.fn()
-        };
-        store = new Vuex.Store({
-            state: {
-                cartItems: [],
-            },
-            actions
-        });
-    });
+
 
     it('should call add method on button click', () => {
         const add = jest.spyOn(OutletSale.methods, 'add');
@@ -36,9 +20,7 @@ describe('OutletSale.vue', () => {
         const wrapper = shallowMount(OutletSale, {
             propsData: {
                 book: bookItem
-            },
-            localVue,
-            store
+            }
         });
         const addButton = wrapper.find('button');
         addButton.trigger('click');

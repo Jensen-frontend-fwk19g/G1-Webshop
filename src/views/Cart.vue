@@ -1,58 +1,65 @@
 <template>
   <article>
-    <h2>You have <span class="cart-lenght">{{ cartLenght }} </span>  in your basket</h2>
+    <h1>
+      You have <span class="cart-lenght">{{ cartLenght }} </span> items in your
+      basket
+    </h1>
     <div class="cartItems">
-      <section v-for="(book, index) in cart" :key="index" :book="book" >
+      <section v-for="(book, index) in cart" :key="index" :book="book">
         <div class="items">
-          <p class="bookTitle">{{ book.Title }} <br>
-          <span class="bookType"> ( {{ book.Type }} )</span>
-          </p>
-          <p class="bookPrice"> price: {{ book.Price }} </p>
-          <button @click="removeItem(book)" :id="book.id" class="dltBtn">X</button>
+          <h2 class="bookTitle">{{ book.Title }}</h2>
+          <h4 class="bookType">Type: {{ book.Type }}</h4>
+          <h3 class="bookPrice">{{ book.Price }} :-</h3>
+          <img :src="book.Img" alt="bild" />
+          <div>
+            <button @click="removeItem(book)" :id="book.id" class="dltBtn">
+              X
+            </button>
+          </div>
         </div>
       </section>
     </div>
 
-    <p class="totalPrice">total price: {{ totalPrice }}</p>
+    <h3 class="totalPrice">Total price: {{ totalPrice }} :-</h3>
   </article>
 </template>
 
 <script>
-import json from "../assets/products.json"
+import json from "../assets/products.json";
 export default {
   props: {
-    cartItem: Array
+    cartItem: Array,
   },
   data() {
     return {
       items: true,
       totalCost: 0,
-      cart: json.cart
-    }
+      cart: json.cart,
+    };
   },
   methods: {
-    removeItem(item){
-      let index= this.cart.indexOf(item);
+    removeItem(item) {
+      let index = this.cart.indexOf(item);
       this.cart.splice(index, 1);
-    }
+    },
   },
   computed: {
-    cartLenght(){
-      if(this.items){
+    cartLenght() {
+      if (this.items) {
         return this.cart.length;
-      }else{
+      } else {
         return 0;
       }
     },
     totalPrice() {
       let totalCost = 0;
-      this.cart.forEach( item => {
-        totalCost += item.Price
-      })
+      this.cart.forEach((item) => {
+        totalCost += item.Price;
+      });
       return totalCost;
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -60,6 +67,11 @@ article {
   display: flex;
   flex-direction: column;
 }
+
+h1, h3 {
+  color: #3d2f27;
+}
+
 .cartItems {
   display: flex;
   flex-wrap: wrap;
@@ -67,18 +79,44 @@ article {
 .items {
   margin: 15px;
   padding: 1rem;
-  border: 1px solid #ccc;
-  background-color: white;
-  box-shadow: 0 0 16px gray;
-  /*float: left;*/
-  width: 150px;
+  border: 1px solid rgba(15, 15, 15, 0.329);
+  background-color: #c9c9c750;
+  box-shadow: 0 0 7px rgba(43, 41, 41, 0.623);
+  float: left;
+  width: 240px;
+  color: #3d2f27;
 }
-.bookType {
-  color:lightskyblue;
-  font-size: 12.5px;
+
+img {
+  width: 200px;
+  height: 160px;
 }
-.bookTitle {
+
+.dltBtn {
+  float: right;
+  display: block;
+  text-decoration: none;
+  background: #705546;
+  color: #eeeeee;
+  text-transform: uppercase;
   font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.7s;
+  letter-spacing: 1px;
+  width: 180px;
+  margin-right: 30px;
+  align-self: start;
+}
+.dltBtn:hover {
+  background: #3d2f27;
+  color: #ffffff;
+  transition: 0.7s;
+  cursor: pointer;
+}
+.dltBtn span {
+  float: left;
 }
 </style>
 
