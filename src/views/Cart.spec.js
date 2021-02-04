@@ -1,8 +1,5 @@
-import { shallowMount, createLocalVue } from '@vue/test-utils';
-import Vuex from 'vuex';
+import { shallowMount, mount } from '@vue/test-utils';
 
-const localVue = createLocalVue();
-localVue.use(Vuex);
 import Cart from './Cart.vue'
 
 describe('Cart.vue', () => {
@@ -93,6 +90,26 @@ describe('Cart.vue', () => {
 
         const actual = parseInt(items)-1;
         expect(actual).toBe(expectedItems);
+    })
+
+    it('calls deleteBtn when the button clicked', async () => {
+        const wrapper = mount(Cart, {
+            propsData: {
+                book: {
+                    "id": 1
+                }
+            }
+        })
+
+        const deleteTask = jest.fn();
+
+        wrapper.setMethods({
+            deleteTask
+        })
+
+        const btn = wrapper.find('.dltBtn')
+        await btn.trigger('click')
+        expect(jest.fn()).toBeCalled()
     })
 
     it('when click delete btn, the book should remove from cart', async () => {

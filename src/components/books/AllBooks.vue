@@ -4,7 +4,7 @@
         <h4>Type: {{book.Type}}</h4>
         <h3>{{book.Price}} :-</h3>
         <img :src="book.Img" alt="bild">
-        <button @click="addToCard(book)">Add to cart</button>        
+        <button class="addBtn" @click="addToCard(book)">Add to cart</button>        
     </div>
 </template>
 
