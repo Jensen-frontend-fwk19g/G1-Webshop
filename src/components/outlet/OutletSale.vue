@@ -12,18 +12,29 @@
 </template>
 
 <script>
+import data from "../../assets/products.json"
 export default {
   name: 'OutletSale',
   props: {
     book: Object
+  },
+  computed: {
+    cartItems() {
+      return data.cart
+    }
   },
   methods: {
     goToCart() {
       //this.$router.push(`/BookInfo/${id}`);
     },
   add(cart) {
-    this.$store.dispatch("addToCart", cart);
-    alert('added to your basket')
+
+     this.cartItems.push({
+                id: cart.id,
+                Title: cart.Title,
+                Price: cart.Price,
+                Type: cart.Type
+            })
   }
 }
 
