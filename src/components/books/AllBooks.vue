@@ -56,7 +56,6 @@ export default {
   width: 200px;
   height: 160px;
 }
-
 .addBtn {
   float: right;
   display: block;

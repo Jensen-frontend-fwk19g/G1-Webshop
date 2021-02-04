@@ -22,7 +22,6 @@
 </template>
 
 <script>
-
 import AllBooks from "./../components/books/AllBooks";
 export default {
   props: {
