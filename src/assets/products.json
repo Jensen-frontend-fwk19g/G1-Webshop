@@ -17,7 +17,7 @@
             "Price": 250,
             "Type": "E-book",
             "Img": "https://images.unsplash.com/photo-1515816052601-210d5501d471?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80",
-            "sale": false
+            "sale": true
         },
         {
             "id": 3,
@@ -98,7 +98,7 @@
             "Price": 200,
             "Type": "E-book",
             "Img": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1042&q=80",
-            "sale": true
+            "sale": false
         },
         {
             "id": 12,
@@ -107,7 +107,7 @@
             "Price": 200,
             "Type": "Hard cover",
             "Img": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1042&q=80",
-            "sale": true
+            "sale": false
         },
         {
             "id": 13,
@@ -152,7 +152,7 @@
             "Price": 300,
             "Type": "E-book",
             "Img": "https://images.unsplash.com/photo-1603049197613-366c045f11b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80",
-            "sale": false
+            "sale": true
         },
         {
             "id": 18,
