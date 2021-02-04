@@ -1,12 +1,12 @@
 <template>
   <section>
     <h1>..Everything in outlet..</h1>
-    <div><OutletSale
+    <OutletSale
       v-for="book in books"
       :key="book.id"
       :book="book"
       v-show="book.sale === true"
-    /></div>
+    />
   </section>
 </template>
 
@@ -23,5 +23,4 @@ export default {
 </script>
 
 <style>
-
 </style>
