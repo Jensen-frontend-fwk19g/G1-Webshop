@@ -1,7 +1,8 @@
 <template>
-  <div class="books" @click="goToCart(book.id)">
+  <div class="books" @click="goToCart()">
     <h2>{{ book.Title }}</h2>
-    <h3>{{ book.Price }}</h3>
+    <h4>Type: {{book.Type}}</h4>
+    <h3>{{ book.Price }} :-</h3>
     <img :src="book.Img" alt="bild"/>
     <div >
         <button @click="add(book)" class="addButton">Add to cart
@@ -18,7 +19,7 @@ export default {
   },
   methods: {
     goToCart() {
-      /*this.$router.push(`/BookInfo/${id}`);*/
+      //this.$router.push(`/BookInfo/${id}`);
     },
   add(cart) {
     this.$store.dispatch("addToCart", cart);
@@ -35,11 +36,12 @@ export default {
 .books {
     margin: 15px;
     padding: 1rem;
-    border: 1px solid #ccc;
-    background-color: white;
-    box-shadow: 0 0 16px gray;
-    float: left;
+    border: 1px solid rgba(15, 15, 15, 0.329);
+    background-color: #c9c9c750;
+    box-shadow: 0 0 7px rgba(43, 41, 41, 0.623);
     width: 240px;
+    float: left;
+    color: #3d2f27;
 }
 img {
     width: 10px;
@@ -56,7 +58,7 @@ img {
   float: right;
 	display: block;
 	text-decoration: none;
-	background: #2f5289;
+	background: #705546;
 	color: #eeeeee;
 	text-transform: uppercase;
   font-weight: bold;
@@ -70,7 +72,7 @@ img {
   align-self: start;
   }
 .addButton:hover {
-	background: #2c3339;
+	background: #3d2f27;
 	color: #ffffff;
 	transition: .7s;
 	cursor: pointer;
