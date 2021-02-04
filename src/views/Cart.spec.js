@@ -139,81 +139,39 @@ describe('Cart.vue', () => {
         expect(actual).toBe(expected)
     })
     
-    it('correct total sum when we have books in basket', () => {
+    it('correct total sum when we have books in basket', async () => {
 
-        const fakeData = [
-            {
-                "id": 9,
-                "Title": "Gone with the Wind",
-                "Price": 400,
-                "Type": "Hard cover"
-            },
-            {
-                "id": 1,
-                "Title": "Harry Potter",
-                "Price": 250,
-                "Type": "Pocket"
-            },
-            {
-                "id": 6,
-                "Title": "Lord of the Rings",
-                "Price": 350,
-                "Type": "Hard cover"
-            },
-            {
-                "id": 18,
-                "Title": "Wuthering height",
-                "Price": 300,
-                "Type": "Hard cover"
-                }
-        ];
         const wrapper = shallowMount(Cart, {
             propsData: {
-                fakeData
+                book: {
+                    id: 9,
+                    Title: "Gone with the Wind",
+                    Price: 400,
+                    Type: "Hard cover"
+                }
             }
         })
 
-        const expected = "1300"
+        const expected = "400";
+        const actual = wrapper.find(".totalPrice").text()
+        expect(actual).toContain(expected)
 
-        const actual = wrapper.find(fakeData.Price).text()
-        console.log('nu',actual)
 
-        expect(actual).toContain(expected);
+        /*const wrapper = shallowMount(Cart)
+        const fakeData = {
+            id: 9,
+            Title: "Gone with the Wind",
+            Price: 400,
+            Type: "Hard cover"
+        },
+
+    /* await wrapper.setData({ actual: fakeData.Price })
+
+        const actual = wrapper.find(".totalPrice").text()
+
+        expect(actual).toContain(fakeData.Price);*/
 	})
 
 })
 
 
-
-
-/*function fakeData() {
-    return
-    [
-        {
-            "id": 9,
-            "Title": "Gone with the Wind",
-            "Price": 400,
-            "Type": "Hard cover"
-        },
-        {
-            "id": 1,
-            "Title": "Harry Potter",
-            "Price": 250,
-            "Type": "Pocket"
-        },
-        {
-            "id": 6,
-            "Title": "Lord of the Rings",
-            "Price": 350,
-            "Type": "Hard cover"
-        },
-        {
-            "id": 18,
-            "Title": "Wuthering height",
-            "Price": 300,
-            "Type": "Hard cover"
-            }
-    ]
-
-}
-*/
