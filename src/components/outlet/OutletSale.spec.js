@@ -70,6 +70,7 @@ describe('OutletSale.vue', () => {
         expect(expectedBookClass).toBeTruthy();
     })
 
+
     it('it should display title of the book correctly', async () => {
         const wrapper = shallowMount(OutletSale, {
             propsData: {
@@ -86,6 +87,7 @@ describe('OutletSale.vue', () => {
         expect(expectedBookTitle).toBe(actualBookTitle);
     })
 
+
     it('it should display all the books', async () => {
         const wrapper = shallowMount(OutletSale, {
             propsData: {
@@ -99,6 +101,7 @@ describe('OutletSale.vue', () => {
         const allOutletBooks = wrapper.findAll('h2').exists();
         expect(allOutletBooks).toBe(true);
     })
+
 
     it('its should display images for the books', async () => {
         const wrapper = shallowMount(OutletSale, {

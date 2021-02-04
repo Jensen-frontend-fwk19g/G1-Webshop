@@ -163,5 +163,59 @@
             "sale": false
         }
     ],
-    "cart": []
+    "cart":[
+        {
+            "id": 9,
+            "Title": "Gone with the Wind",
+            "Price": 400,
+            "Type": "Hard cover"
+        },
+        {
+            "id": 1,
+            "Title": "Harry Potter",
+            "Price": 250,
+            "Type": "Pocket"
+        },
+        {
+            "id": 6,
+            "Title": "Lord of the Rings",
+            "Price": 350,
+            "Type": "Hard cover"
+        },
+        {
+            "id": 18,
+            "Title": "Wuthering height",
+            "Price": 300,
+            "Type": "Hard cover"
+            }
+    ],
+    "outlet": [
+        {
+            "id": 17,
+            "Title": "Wuthering height",
+            "Description": "An orphan kid who is living with Earnshaws",
+            "Price": 300,
+            "Type": "E-book",
+            "Img": "wh.jpg",
+            "sale": true
+        },
+        {
+            "id": 14,
+            "Title": "The Hunger Games",
+            "Description": "Kids who are fighting to the death in a game",
+            "Price": 500,
+            "Type": "E-book",
+            "Img": "hungergames.jpg",
+            "sale": true
+        },  
+        {
+            "id": 11,
+            "Title": "Doctor Sleep",
+            "Description": "The story about the grown up boy from the earlier book the Shining.",
+            "Price": 200,
+            "Type": "E-book",
+            "Img": "drsleep.jpg",
+            "sale": true
+        }
+    ]
 }
