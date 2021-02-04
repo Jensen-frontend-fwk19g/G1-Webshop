@@ -139,7 +139,7 @@ describe('Cart.vue', () => {
         expect(actual).toBe(expected)
     })
     
-    it('correct total sum when we have books in basket', async () => {
+    /*it('correct total sum when we have books in basket', async () => {
 
         const wrapper = shallowMount(Cart, {
             propsData: {
@@ -165,13 +165,13 @@ describe('Cart.vue', () => {
             Type: "Hard cover"
         },
 
-    /* await wrapper.setData({ actual: fakeData.Price })
+    await wrapper.setData({ actual: fakeData.Price })
 
         const actual = wrapper.find(".totalPrice").text()
 
         expect(actual).toContain(fakeData.Price);*/
-	})
-
 })
+
+
 
 
