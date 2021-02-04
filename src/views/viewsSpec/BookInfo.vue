@@ -16,28 +16,25 @@
 <script>
 export default {
   props: {
-      books: Array,
-      book : {
-      default: () => ({
-        Title: "ERROR",
-        Price: "Price not applcable",
-        Description: "No description available",
-      }),
-      type: Object, 
-      }
+      books: Array
   },
   computed: {
     bookInfo() {
       let chosenBook = {
-        Title : this.infoChosen.Title,
-        Price : this.infoChosen.Price,
-        Description : this.infoChosen.Description,
-        Img : this.infoChosen.Img
+        Title : this.infoChosen ? this.infoChosen.Title : 'Error',
+        Price : this.infoChosen ? this.infoChosen.Price : 'Price not applcable',
+        Description : this.infoChosen ? this.infoChosen.Description : 'No description available',
+        Img : this.infoChosen ? this.infoChosen.Img : 'No img available'
       }
       return chosenBook;
     },
     infoChosen(){ 
-        return this.books.filter(b => b.id == this.$route.params.id)[0]
+        console.log(this.books + 'hej jag är books');
+        if ( this.$route !== undefined ) {
+          return this.books.find(b => b.id == this.$route.params.id)
+        } else {
+          return null
+        }
       }
     }
 };
