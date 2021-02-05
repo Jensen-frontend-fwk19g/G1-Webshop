@@ -117,18 +117,4 @@ describe('OutletSale.vue', () => {
         const bookPrice = wrapper.findAll('h3').exists();
         expect(bookPrice).toBe(true);
     })
-
-    it('it should allow clicking on a book', async () => {
-        const wrapper = shallowMount(OutletSale, {
-            propsData: {
-                book: {
-                    "id": 11,
-                    "Title": "Doctor Sleep",
-                }
-            }
-        });
-
-        await wrapper.find('div').trigger('click');
-    })
-
 })
