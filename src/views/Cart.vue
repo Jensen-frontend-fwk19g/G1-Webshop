@@ -67,11 +67,9 @@ article {
   display: flex;
   flex-direction: column;
 }
-
 h1, h3 {
   color: #3d2f27;
 }
-
 .cartItems {
   display: flex;
   flex-wrap: wrap;
@@ -86,12 +84,10 @@ h1, h3 {
   width: 240px;
   color: #3d2f27;
 }
-
 img {
   width: 200px;
   height: 160px;
 }
-
 .dltBtn {
   float: right;
   display: block;
@@ -119,4 +115,3 @@ img {
   float: left;
 }
 </style>
-

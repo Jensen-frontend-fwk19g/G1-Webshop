@@ -95,7 +95,6 @@ describe('Cart.vue', () => {
         const expected = "Hard cover";
 
         const actual = wrapper.find('.bookType')
-        console.log('text',actual)
         const actualText = actual.text()
 
         expect(actualText).toContain(expected)
@@ -245,4 +244,3 @@ function fakeData() {
         },
     ];
 }
-
