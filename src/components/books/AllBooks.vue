@@ -35,7 +35,6 @@ export default {
         Type: book.Type,
         Img: book.Img
       });
-      console.log("cart", this.cart);
     },
   },
 };
@@ -56,7 +55,6 @@ export default {
   width: 200px;
   height: 160px;
 }
-
 .addBtn {
   float: right;
   display: block;

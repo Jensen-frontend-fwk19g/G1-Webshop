@@ -50,12 +50,10 @@ export default {
   float: left;
   color: #3d2f27;
 }
-
 .books img {
   width: 200px;
   height: 160px;
 }
-
 .addButton {
   float: right;
   display: block;
